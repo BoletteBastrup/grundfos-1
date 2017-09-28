@@ -1,3 +1,5 @@
+
+
 //TABS UNDER MARKETING MATERIAL
 function openTab(evt, tab) {
     var i, tabcontent, tablinks;
@@ -9,7 +11,7 @@ function openTab(evt, tab) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(tab).style.display = "block";
+    document.getElementById(tab).style.display = "flex";
     evt.currentTarget.className += " active";
 }
 

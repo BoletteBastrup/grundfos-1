@@ -278,6 +278,7 @@ main.marketing-main{
       border: 1px solid #ccc;
       background: white;
       margin-top: -2px;
+      flex-direction: column;
       h3 {
         font-size: 13px;
         color: #727272;
@@ -289,9 +290,119 @@ main.marketing-main{
         color: #727272;
         font-weight: normal;
       }
+      div.awesomeplete {
+        width: 100%;
+      }
+      #submit {
+        padding: 12px;
+        margin-left: -4px;
+      }
+      #advancedSearch {
+        padding: 12px;
+        margin-left: 5px;
+      }
+      section:nth-child(3){
+        margin-top: 10px;
+      }
   }
 }
 
+//Colors
+$lightBlue:                #8cbbdd;
+$textColor:                #333333;
+$complementary:            #34648f;
+$lightGrey:                #f2f2f2;
+$primaryButton:            #6eb556;
+$primaryButtonMouseOver:   #4aa22c;
+$secondaryButton:          #3386c3;
+$secondaryButtonMouseOver: #0068b4;
+$advancedSearch:           #fcfcfc;
+$tableBorder:              #c9c9c9;
+
+#searchResult {
+  border-top: 1px solid $tableBorder;
+  margin-top: 20px;
+  padding: 12px 0;
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+#table-header{
+  color: #fff;
+  width: calc(100% + 1px);
+  padding: 8px;
+  background-color: $grundfosBlue;
+  border-right: 1px solid $tableBorder;
+  border-left: 1px solid $tableBorder;
+  border-top: 1px solid $tableBorder;
+  &:active {
+    outline: none;
+  }
+  tr{
+
+    td{
+      width: 1%;
+
+      &:nth-child(1){
+        width: 13%;
+        padding-left: 75px;
+      }
+    }
+  }
+}
+
+details{
+  color: $textColor;
+  border-bottom: 1px solid $tableBorder;
+  border-right: 1px solid $tableBorder;
+  border-left: 1px solid $tableBorder;
+  &:focus {
+    outline: none;
+  }
+  summary{
+    padding: 8px;
+    background-color: $lightBlue;
+    text-transform: uppercase;
+    border-top: 1px solid $tableBorder;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  details{
+    border: none;
+    &:focus {
+      outline: none;
+    }
+
+    summary{
+      padding: 6px 8px;
+      background-color: $lightGrey;
+      text-transform: capitalize;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    table{
+      width: 100%;
+      border-collapse: collapse;
+
+      tr{
+        border-top: 1px solid $tableBorder;
+
+        td{
+          padding: 2px 4px;
+        }
+
+        .td-name{
+          width: 65%;
+        }
+      }
+    }
+  }
+}
 
 
 

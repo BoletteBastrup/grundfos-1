@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>My Grundfos</title>
     <link rel="stylesheet" href="css/mystyle.min.css">
+    <link rel="stylesheet" href="css/awesomplete.css">
     <link rel="stylesheet" href="fontawesome/scss/font-awesome.min.css">
 </head>
 <body>
@@ -71,7 +72,136 @@
         </article>
 
         <article id="Marketing material" class="tabcontent">
-          <h3>Inspiration</h3>
+          <p>Search by product number or name</p>
+          <section>
+            <input class="awesomplete inputPump" data-list="Alpha 1, Alpha 2, Alpha 3">
+            <button type="button" onclick="submitPump()" id="submit" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button type="button" onclick="advancedSearch()" id="advancedSearch" name="button">Advanced Search</button>
+          </section>
+          <section>
+            <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
+            <label for="mymaterialsonly">My Materials Only</label>
+          </section>
+          <section id="advancedSearchResult" style="display: none;">
+
+          </section>
+          <section id="searchResult" style="display: none;">
+            <p>Results</p>
+            <table id="table-header">
+              <tr>
+                <td>Title</td>
+                <td>File</td>
+                <td>Size</td>
+                <td>Updated</td>
+              </tr>
+            </table>
+            <details open="true">
+              <summary>Alpha 2</summary>
+              <details open="true">
+                <summary>Product Images</summary>
+                <table>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_application_image</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_product_image</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                </table>
+              </details>
+              <details open="true">
+                <summary>Webbanners</summary>
+                <table>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_webbanner_300x250px_ENGLISH</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_circulator_webbanner_728x90px_ENGLISH</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                </table>
+              </details>
+              <details open="true">
+                <summary>Unique Selling Points (USP)</summary>
+                <table>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                    <td class="td-name">ALPHA2_UPSs</td>
+                    <td>png</td>
+                    <td>41kb</td>
+                    <td>17/09/21</td>
+                  </tr>
+                </table>
+              </details>
+            </details>
+        	</section>
         </article>
 
         <article id="My material" class="tabcontent">
@@ -107,7 +237,26 @@
       </section>
     </footer>
 
+<script src="js/awesomplete.min.js" charset="utf-8"></script>
 <script src="js/script.js" charset="utf-8"></script>
+<script type="text/javascript">
+//Marketing Material Search Specific Pump - Alpha 2 Eksempel
+function submitPump() {
+  var input = document.getElementsByClassName("inputPump")[0];
+  //console.log(input);
+  var pump = input.value;
+  switch(pump) {
+    case "Alpha 1":
+      break;
+    case "Alpha 2":
+      document.getElementById("searchResult").style.display = "block";
+      break;
+    case "Alpha 3":
+      break;
+    default: "error";
+  };
+};
+</script>
 </body>
 
 </html>
