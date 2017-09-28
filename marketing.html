@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="css/mystyle.min.css">
     <link rel="stylesheet" href="css/awesomplete.css">
     <link rel="stylesheet" href="fontawesome/scss/font-awesome.min.css">
+    
+    <style>
+		.advancedSearchBox {
+			display:none;
+		}
+		
+		.show {
+			display:block;
+		}
+	</style>
 </head>
 <body>
   <header>
@@ -76,14 +86,72 @@
           <section>
             <input class="awesomplete inputPump" data-list="Alpha 1, Alpha 2, Alpha 3">
             <button type="button" onclick="submitPump()" id="submit" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button type="button" onclick="advancedSearch()" id="advancedSearch" name="button">Advanced Search</button>
+            <button type="button" id="advancedSearch" name="button">Advanced Search</button>
           </section>
           <section>
             <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
-            <label for="mymaterialsonly">My Materials Only</label>
+            <label for="mymaterialsonly">Search by 'My material' only</label>
           </section>
-          <section id="advancedSearchResult" style="display: none;">
-
+          <section class="advancedSearchBox">
+			<article>
+				
+				<section id="productResult">
+				<p>Search ‘All’ or add product(s) to search list</p>
+				
+				<input id="addProduct" class="awesomplete inputPump" data-list="Alpha 1, Alpha 2, Alpha 3" v-model="newProduct" @keyup.enter="addProduct" placeholder="Add product(s)">
+            	<button @click="addProduct"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            	
+            	<section>
+					<input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
+					<label for="mymaterialsonly">Search by 'My material' only</label>
+				</section>
+            	
+            	<section>
+            		<ul class="productList">
+            			<li v-for="productItem in productItems" v-bind:key="productItem.text"> 
+              				<p>{{ productItem.text }}</p>
+                          	<button @click="removeProductItems(productItem)">X</button>
+            			</li>
+            		</ul>
+            	</section>
+            	
+				
+          		</section>
+          		
+           		<p>Category</p>
+           		<ul>
+           			<li>
+           				<input type="checkbox" name="productImages">
+           				<label for="productImages">Product Images</label> 
+           			</li>
+           			<li>
+           				<input type="checkbox" name="webbanners">
+           				<label for="webbanners">Webbanners</label> 
+           			</li>
+           			<li>
+           				<input type="checkbox" name="videos">
+           				<label for="vidoes">Videos</label> 
+           			</li>
+           			<li>
+           				<input type="checkbox" name="caseStories">
+           				<label for="caseStories">Case Stories</label> 
+           			</li>
+           			<li>
+           				<input type="checkbox" name="uniqueSellingPoints">
+           				<label for="uniqueSellingPoints">Unique Selling Points</label> 
+           			</li>
+           			<li>
+           				<input type="checkbox" name="publications">
+           				<label for="publicaitons">Publications</label> 
+           			</li>
+           		</ul>
+           		
+           		<button>Search</button>
+            
+				
+			</article>
+         
+         
           </section>
           <section id="searchResult" style="display: none;">
             <p>Results</p>
@@ -95,9 +163,9 @@
                 <td>Updated</td>
               </tr>
             </table>
-            <details open="true">
+            <details open>
               <summary>Alpha 2</summary>
-              <details open="true">
+              <details open>
                 <summary>Product Images</summary>
                 <table>
                   <tr>
@@ -166,7 +234,7 @@
                   </tr>
                 </table>
               </details>
-              <details open="true">
+              <details open>
                 <summary>Webbanners</summary>
                 <table>
                   <tr>
@@ -187,7 +255,7 @@
                   </tr>
                 </table>
               </details>
-              <details open="true">
+              <details open>
                 <summary>Unique Selling Points (USP)</summary>
                 <table>
                   <tr>
@@ -237,7 +305,10 @@
       </section>
     </footer>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/awesomplete.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script> 
 <script src="js/script.js" charset="utf-8"></script>
 <script type="text/javascript">
 //Marketing Material Search Specific Pump - Alpha 2 Eksempel
@@ -255,7 +326,15 @@ function submitPump() {
       break;
     default: "error";
   };
-};
+};	
+	
+$('#advancedSearch').click(function(){
+	$('.advancedSearchBox').toggleClass("show");
+});
+
+
+
+	
 </script>
 </body>
 
