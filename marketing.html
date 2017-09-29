@@ -75,9 +75,9 @@
 
       <article id="Marketing material" class="tabcontent">
         <p>Search by product number or name</p>
-        <section>
-          <input class="awesomplete inputPump inputLarge" data-list="Alpha 1, Alpha 2, Alpha 3">
-          <button type="button" class="iconButton" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <section class="prefetch">
+          <input class="typeahead inputPump inputLarge">
+          <button type="button" id="submit" class="iconButton" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
           <button type="button" id="advancedSearch" name="button">Advanced Search</button>
         </section>
         <section class="show displayNone">
@@ -303,6 +303,25 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/awesomplete.min.js" charset="utf-8"></script>
+  <script src="js/bloodhound.min.js" charset="utf-8"></script>
+  <script src="js/typeahead.bundle.min.js" charset="utf-8"></script>
+  <script src="js/typeahead.jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var pumps = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace,
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      // url points to a json file that contains an array of country names, see
+      // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
+      prefetch: 'data.json'
+      });
+
+      // passing in `null` for the `options` arguments will result in the default
+      // options being used
+      $('.prefetch .typeahead').typeahead(null, {
+      name: 'pumps',
+      source: pumps
+    });
+  </script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="js/script.js" charset="utf-8"></script>
   <script type="text/javascript">

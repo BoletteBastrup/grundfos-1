@@ -1,21 +1,6 @@
-//Marketing Material Search Specific Pump - Alpha 2 Eksempel
-$(document).ready(
 $('#submit').click(function() {
-  var input = document.getElementsByClassName("inputPump")[0];
-  //console.log(input);
-  var pump = input.value;
-  switch (pump) {
-    case "Alpha 1":
-      break;
-    case "Alpha 2":
-      document.getElementById("searchResult").style.display = "block";
-      break;
-    case "Alpha 3":
-      break;
-    default:
-      "error";
-  };
-}));
+  document.getElementById("searchResult").style.display = "block";
+});
 
 $('#advancedSearch').click(function() {
   $('.displayNone').toggleClass("show");

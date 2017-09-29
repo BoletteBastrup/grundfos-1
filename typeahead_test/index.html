@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>typeahead</title>
+
+    <style media="screen">
+      tt-menu {
+        background-color: grey;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="prefetch">
+      <input class="typeahead" type="text" placeholder="Pumps">
+    </div>
+
+    <div class="prefetch">
+      <input class="typeahead" type="text" placeholder="Pumps">
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="typeahead.js/bloodhound.min.js" charset="utf-8"></script>
+<script src="typeahead.js/typeahead.bundle.min.js" charset="utf-8"></script>
+<script src="typeahead.js/typeahead.jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+var pumps = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  // url points to a json file that contains an array of country names, see
+  // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
+  prefetch: 'data.json'
+  });
+
+  // passing in `null` for the `options` arguments will result in the default
+  // options being used
+  $('.prefetch .typeahead').typeahead(null, {
+  name: 'pumps',
+  source: pumps
+});
+</script>
+  </body>
+</html>
