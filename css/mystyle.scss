@@ -1,4 +1,15 @@
-$grundfosBlue: #11497c;
+//Colors
+$lightBlue:                #8cbbdd;
+$textColor:                #333333;
+$complementary:            #34648f;
+$lightGrey:                #f2f2f2;
+$primaryButton:            #6eb556;
+$primaryButtonMouseOver:   #4aa22c;
+$secondaryButton:          #3386c3;
+$secondaryButtonMouseOver: #0068b4;
+$advancedSearch:           #fcfcfc;
+$tableBorder:              #c9c9c9;
+$grundfosBlue:             #11497c;
 
 * {
   margin: 0;
@@ -8,6 +19,53 @@ $grundfosBlue: #11497c;
 
 h1, h2 {
   font-size: 1.8em;
+}
+
+ul {
+  list-style: none;
+}
+
+[type=checkbox] {
+  -webkit-appearance: none;
+-moz-appearance: none;
+background-color: #fafafa;
+border: 1px solid #cacece;
+width: 15px;
+height: 15px;
+  &:focus {
+    outline:none;
+  }
+  &:checked:after {
+    content: '\2713';
+  	font-size: 12px;
+  	position: absolute;
+  }
+}
+
+
+.secondaryAction {
+  color: white;
+  background-color: #3386c3;
+  padding: 0.8em 2.5em;
+  border: none;
+  float: right;
+  margin-top: 2em;
+  margin-right: -3em;
+  margin-bottom: -0.5em;
+  &:hover {
+    background-color:$secondaryButtonMouseOver;
+  }
+  &:focus {
+    outline:none;
+  }
+}
+
+.inputLarge {
+  width:300px;
+}
+
+.textSpace {
+  padding-bottom: 1em;
 }
 
 
@@ -40,6 +98,19 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+.displayNone {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.iconButton {
+  padding: 12px;
+  margin-left: -4px;
 }
 
 header {
@@ -293,10 +364,6 @@ main.marketing-main{
       div.awesomeplete {
         width: 100%;
       }
-      #submit {
-        padding: 12px;
-        margin-left: -4px;
-      }
       #advancedSearch {
         padding: 12px;
         margin-left: 5px;
@@ -307,17 +374,24 @@ main.marketing-main{
   }
 }
 
-//Colors
-$lightBlue:                #8cbbdd;
-$textColor:                #333333;
-$complementary:            #34648f;
-$lightGrey:                #f2f2f2;
-$primaryButton:            #6eb556;
-$primaryButtonMouseOver:   #4aa22c;
-$secondaryButton:          #3386c3;
-$secondaryButtonMouseOver: #0068b4;
-$advancedSearch:           #fcfcfc;
-$tableBorder:              #c9c9c9;
+#advancedSearchBox {
+  background-color: $advancedSearch;
+  border:1px solid $tableBorder;
+  padding: 2em 5em;
+  margin: 2em 0 1em 0;
+  #advancedSearchFlex {
+    display:flex;
+  }
+  li {
+    padding-bottom:1em;
+    input {
+      vertical-align: bottom;
+    }
+  }
+  .inputSmall {
+
+  }
+}
 
 #searchResult {
   border-top: 1px solid $tableBorder;

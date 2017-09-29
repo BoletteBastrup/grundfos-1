@@ -1,3 +1,26 @@
+//Marketing Material Search Specific Pump - Alpha 2 Eksempel
+$(document).ready(
+$('#submit').click(function() {
+  var input = document.getElementsByClassName("inputPump")[0];
+  //console.log(input);
+  var pump = input.value;
+  switch (pump) {
+    case "Alpha 1":
+      break;
+    case "Alpha 2":
+      document.getElementById("searchResult").style.display = "block";
+      break;
+    case "Alpha 3":
+      break;
+    default:
+      "error";
+  };
+}));
+
+$('#advancedSearch').click(function() {
+  $('.displayNone').toggleClass("show");
+});
+
 
 
 //TABS UNDER MARKETING MATERIAL
@@ -20,17 +43,17 @@ document.getElementById("defaultOpen").click();
 
 new Vue({
 	el: '#productResult',
-	
+
 	data: {
 	productItems:[
 		],
-	newProduct:'',	
+	newProduct:'',
 	},
-	
-	
+
+
 	methods: {
 
-//Methods for Preperation		
+//Methods for Preperation
 	addProduct: function () {
 			var productItem = this.newProduct.trim();
 			if (productItem) {
@@ -46,6 +69,6 @@ new Vue({
 			var index = this.productItems.indexOf(productItem);
 			this.productItems.splice(index, 1);
 		},
-	
+
 }
 });

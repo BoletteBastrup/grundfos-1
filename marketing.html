@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>My Grundfos</title>
-    <link rel="stylesheet" href="css/mystyle.min.css">
-    <link rel="stylesheet" href="css/awesomplete.css">
-    <link rel="stylesheet" href="fontawesome/scss/font-awesome.min.css">
-    
-    <style>
-		.advancedSearchBox {
-			display:none;
-		}
-		
-		.show {
-			display:block;
-		}
-	</style>
+  <meta charset="utf-8">
+  <title>My Grundfos</title>
+  <link rel="stylesheet" href="css/mystyle.min.css">
+  <link rel="stylesheet" href="css/awesomplete.css">
+  <link rel="stylesheet" href="fontawesome/scss/font-awesome.min.css">
 </head>
+
 <body>
   <header>
     <section class="top">
@@ -51,291 +43,270 @@
     <a href="index.html">My Grundfos</a>
   </section>
 
-    <section class="main-content">
-      <aside>
-        <h1>MyGrundfos</h1>
-        <nav class="sideNav">
-          <ul>
-            <li><a href="index.html">Dashboard</a></li>
-          </ul>
-        </nav>
+  <section class="main-content">
+    <aside>
+      <h1>MyGrundfos</h1>
+      <nav class="sideNav">
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+        </ul>
+      </nav>
 
-        <h2>Tools</h2>
-        <nav class="sideNav">
-          <ul>
-            <li>Spare parts finder</li>
-            <li>Pump replacement</li>
-            <li>Quotations</li>
-            <li>Orderstatus</li>
-            <li>List price finder</li>
-            <li>Availability</li>
-            <li class="active">Marketing material</li>
-          </ul>
-        </nav>
-      </aside>
+      <h2>Tools</h2>
+      <nav class="sideNav">
+        <ul>
+          <li>Spare parts finder</li>
+          <li>Pump replacement</li>
+          <li>Quotations</li>
+          <li>Orderstatus</li>
+          <li>List price finder</li>
+          <li>Availability</li>
+          <li class="active">Marketing material</li>
+        </ul>
+      </nav>
+    </aside>
 
-      <main class="marketing-main">
-        <article class="tab">
-          <button class="tablinks" onclick="openTab(event, 'Marketing material')" id="defaultOpen">Marketing material</button>
-          <button class="tablinks" onclick="openTab(event, 'My material')">My material</button>
-          <button class="tablinks" onclick="openTab(event, 'Inspiration')">Inspiration</button>
-        </article>
+    <main class="marketing-main">
+      <article class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Marketing material')" id="defaultOpen">Marketing material</button>
+        <button class="tablinks" onclick="openTab(event, 'My material')">My material</button>
+        <button class="tablinks" onclick="openTab(event, 'Inspiration')">Inspiration</button>
+      </article>
 
-        <article id="Marketing material" class="tabcontent">
-          <p>Search by product number or name</p>
-          <section>
-            <input class="awesomplete inputPump" data-list="Alpha 1, Alpha 2, Alpha 3">
-            <button type="button" onclick="submitPump()" id="submit" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button type="button" id="advancedSearch" name="button">Advanced Search</button>
+      <article id="Marketing material" class="tabcontent">
+        <p>Search by product number or name</p>
+        <section>
+          <input class="awesomplete inputPump inputLarge" data-list="Alpha 1, Alpha 2, Alpha 3">
+          <button type="button" class="iconButton" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <button type="button" id="advancedSearch" name="button">Advanced Search</button>
+        </section>
+        <section class="show displayNone">
+          <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
+          <label for="mymaterialsonly">Search by 'My material' only</label>
+        </section>
+        <section id="advancedSearchBox" class="displayNone">
+
+          <div id="advancedSearchFlex">
+            <section id="productResult">
+              <p class="textSpace">Search ‘All’ or add product(s) to search list</p>
+
+              <div id="searchBar">
+                <input id="addProduct" class="awesomplete inputPump inputSmall" data-list="Alpha 1, Alpha 2, Alpha 3" v-model="newProduct" @keyup.enter="addProduct" placeholder="Add product(s)">
+                <button @click="addProduct" class="iconButton"><i class="fa fa-plus" aria-hidden="true"></i></button>
+              </div>
+
+              <section>
+                <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
+                <label for="mymaterialsonly">Search by 'My material' only</label>
+              </section>
+
+              <section>
+                <ul class="productList">
+                  <li v-for="productItem in productItems" v-bind:key="productItem.text">
+                    <p>{{ productItem.text }}</p>
+                    <button @click="removeProductItems(productItem)">X</button>
+                  </li>
+                </ul>
+              </section>
+
+
+            </section>
+
+            <section>
+              <p class="textSpace">Category</p>
+              <ul>
+                <li>
+                  <input type="checkbox" name="productImages">
+                  <label for="productImages">Product Images</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="webbanners">
+                  <label for="webbanners">Webbanners</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="videos">
+                  <label for="vidoes">Videos</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="caseStories">
+                  <label for="caseStories">Case Stories</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="uniqueSellingPoints">
+                  <label for="uniqueSellingPoints">Unique Selling Points</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="publications">
+                  <label for="publicaitons">Publications</label>
+                </li>
+              </ul>
+
           </section>
-          <section>
-            <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
-            <label for="mymaterialsonly">Search by 'My material' only</label>
-          </section>
-          <section class="advancedSearchBox">
-			<article>
-				
-				<section id="productResult">
-				<p>Search ‘All’ or add product(s) to search list</p>
-				
-				<input id="addProduct" class="awesomplete inputPump" data-list="Alpha 1, Alpha 2, Alpha 3" v-model="newProduct" @keyup.enter="addProduct" placeholder="Add product(s)">
-            	<button @click="addProduct"><i class="fa fa-plus" aria-hidden="true"></i></button>
-            	
-            	<section>
-					<input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
-					<label for="mymaterialsonly">Search by 'My material' only</label>
-				</section>
-            	
-            	<section>
-            		<ul class="productList">
-            			<li v-for="productItem in productItems" v-bind:key="productItem.text"> 
-              				<p>{{ productItem.text }}</p>
-                          	<button @click="removeProductItems(productItem)">X</button>
-            			</li>
-            		</ul>
-            	</section>
-            	
-				
-          		</section>
-          		
-           		<p>Category</p>
-           		<ul>
-           			<li>
-           				<input type="checkbox" name="productImages">
-           				<label for="productImages">Product Images</label> 
-           			</li>
-           			<li>
-           				<input type="checkbox" name="webbanners">
-           				<label for="webbanners">Webbanners</label> 
-           			</li>
-           			<li>
-           				<input type="checkbox" name="videos">
-           				<label for="vidoes">Videos</label> 
-           			</li>
-           			<li>
-           				<input type="checkbox" name="caseStories">
-           				<label for="caseStories">Case Stories</label> 
-           			</li>
-           			<li>
-           				<input type="checkbox" name="uniqueSellingPoints">
-           				<label for="uniqueSellingPoints">Unique Selling Points</label> 
-           			</li>
-           			<li>
-           				<input type="checkbox" name="publications">
-           				<label for="publicaitons">Publications</label> 
-           			</li>
-           		</ul>
-           		
-           		<button>Search</button>
-            
-				
-			</article>
-         
-         
-          </section>
-          <section id="searchResult" style="display: none;">
-            <p>Results</p>
-            <table id="table-header">
-              <tr>
-                <td>Title</td>
-                <td>File</td>
-                <td>Size</td>
-                <td>Updated</td>
-              </tr>
-            </table>
+          </div>
+
+          <button class="secondaryAction">Search</button>
+
+
+        </section>
+        <section id="searchResult" style="display: none;">
+          <p>Results</p>
+          <table id="table-header">
+            <tr>
+              <td>Title</td>
+              <td>File</td>
+              <td>Size</td>
+              <td>Updated</td>
+            </tr>
+          </table>
+          <details open>
+            <summary>Alpha 2</summary>
             <details open>
-              <summary>Alpha 2</summary>
-              <details open>
-                <summary>Product Images</summary>
-                <table>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_application_image</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_product_image</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                </table>
-              </details>
-              <details open>
-                <summary>Webbanners</summary>
-                <table>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_webbanner_300x250px_ENGLISH</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_circulator_webbanner_728x90px_ENGLISH</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                </table>
-              </details>
-              <details open>
-                <summary>Unique Selling Points (USP)</summary>
-                <table>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td><i class="fa fa-eye" aria-hidden="true"></i></td>
-                    <td class="td-name">ALPHA2_UPSs</td>
-                    <td>png</td>
-                    <td>41kb</td>
-                    <td>17/09/21</td>
-                  </tr>
-                </table>
-              </details>
+              <summary>Product Images</summary>
+              <table>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_application_image</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_product_image</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+              </table>
             </details>
-        	</section>
-        </article>
+            <details open>
+              <summary>Webbanners</summary>
+              <table>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_webbanner_300x250px_ENGLISH</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_circulator_webbanner_728x90px_ENGLISH</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+              </table>
+            </details>
+            <details open>
+              <summary>Unique Selling Points (USP)</summary>
+              <table>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td class="td-name">ALPHA2_UPSs</td>
+                  <td>png</td>
+                  <td>41kb</td>
+                  <td>17/09/21</td>
+                </tr>
+              </table>
+            </details>
+          </details>
+        </section>
+      </article>
 
-        <article id="My material" class="tabcontent">
-          <h3>Inspiration</h3>
-        </article>
+      <article id="My material" class="tabcontent">
+        <h3>Inspiration</h3>
+      </article>
 
-        <article id="Inspiration" class="tabcontent">
-          <h3>Inspiration</h3>
-        </article>
-      </main>
+      <article id="Inspiration" class="tabcontent">
+        <h3>Inspiration</h3>
+      </article>
+    </main>
+  </section>
+
+  <footer>
+    <section class="be-think-innovate">
+      <img src="img/bethinkinnovate.png" alt="Be Think Innovate">
     </section>
 
-    <footer>
-      <section class="be-think-innovate">
-        <img src="img/bethinkinnovate.png" alt="Be Think Innovate">
-      </section>
-
-      <section class="contact">
-        <h4>Grundfos Pumps Ltd</h4>
-        <ul>
-          <li>Grovebury Road</li>
-          <li>Leighton Buzzard</li>
-          <li>Beds LU7 4TL</li>
-        </ul>
-        <ul>
-          <li>Tel: 01525 850000</li>
-          <li>Email: grundfos-uk@sales.grundfos.com</li>
-        </ul>
-        <ul>
-          <li>Registration No. 805960 England.</li>
-        </ul>
-        <a href="">Legal Issues</a>
-      </section>
-    </footer>
+    <section class="contact">
+      <h4>Grundfos Pumps Ltd</h4>
+      <ul>
+        <li>Grovebury Road</li>
+        <li>Leighton Buzzard</li>
+        <li>Beds LU7 4TL</li>
+      </ul>
+      <ul>
+        <li>Tel: 01525 850000</li>
+        <li>Email: grundfos-uk@sales.grundfos.com</li>
+      </ul>
+      <ul>
+        <li>Registration No. 805960 England.</li>
+      </ul>
+      <a href="">Legal Issues</a>
+    </section>
+  </footer>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/awesomplete.min.js" charset="utf-8"></script>
-<script src="https://unpkg.com/vue/dist/vue.js"></script> 
-<script src="js/script.js" charset="utf-8"></script>
-<script type="text/javascript">
-//Marketing Material Search Specific Pump - Alpha 2 Eksempel
-function submitPump() {
-  var input = document.getElementsByClassName("inputPump")[0];
-  //console.log(input);
-  var pump = input.value;
-  switch(pump) {
-    case "Alpha 1":
-      break;
-    case "Alpha 2":
-      document.getElementById("searchResult").style.display = "block";
-      break;
-    case "Alpha 3":
-      break;
-    default: "error";
-  };
-};	
-	
-$('#advancedSearch').click(function(){
-	$('.advancedSearchBox').toggleClass("show");
-});
-
-
-
-	
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/awesomplete.min.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  </script>
 </body>
 
 </html>
