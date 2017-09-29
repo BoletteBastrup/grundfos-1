@@ -84,10 +84,10 @@
           <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
           <label for="mymaterialsonly">Search by 'My material' only</label>
         </section>
-        <section id="advancedSearchBox" class="displayNone">
+        <section id="advancedSearchBox" class="displayNone up-arrow">
 
           <div id="advancedSearchFlex">
-            <section id="productResult">
+            <section id="productResult"> <!-- // TODO: Skal dette hedde product reusltat??? (evt. kalde det noget andet, da det ikke er resulatet med søgningen)-->
               <p class="textSpace">Search ‘All’ or add product(s) to search list</p>
 
               <div id="searchBar">
@@ -112,7 +112,7 @@
 
             </section>
 
-            <section>
+            <section id="category">
               <p class="textSpace">Category</p>
               <ul>
                 <li>
@@ -164,15 +164,15 @@
               <summary>Product Images</summary>
               <table>
                 <tr>
-                  <td><input type="checkbox"></td>
-                  <td><i class="fa fa-eye" aria-hidden="true"></i></td>
+                  <td><input type="checkbox" class="checked"></td>
+                  <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
                   <td class="td-name">ALPHA2_circulator_application_image</td>
                   <td>png</td>
                   <td>41kb</td>
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_product_image</td>
                   <td>png</td>
@@ -180,7 +180,7 @@
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
                   <td>png</td>
@@ -188,7 +188,7 @@
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
                   <td>png</td>
@@ -196,7 +196,7 @@
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
                   <td>png</td>
@@ -204,7 +204,7 @@
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
                   <td>png</td>
@@ -212,7 +212,7 @@
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
                   <td>png</td>
@@ -220,7 +220,7 @@
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
                   <td>png</td>
@@ -233,7 +233,7 @@
               <summary>Webbanners</summary>
               <table>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_webbanner_300x250px_ENGLISH</td>
                   <td>png</td>
@@ -241,7 +241,7 @@
                   <td>17/09/21</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_circulator_webbanner_728x90px_ENGLISH</td>
                   <td>png</td>
@@ -254,7 +254,7 @@
               <summary>Unique Selling Points (USP)</summary>
               <table>
                 <tr>
-                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" class="checked"></td>
                   <td><i class="fa fa-eye" aria-hidden="true"></i></td>
                   <td class="td-name">ALPHA2_UPSs</td>
                   <td>png</td>
@@ -264,6 +264,15 @@
               </table>
             </details>
           </details>
+          <section class="download">
+            <article class="selectBox">
+              <input type="checkbox" onclick="toggle(this);">
+              <label for="">Select All</label>
+              <input type="checkbox">
+              <label for="">Deselect All</label>
+            </article>
+            <button>Download Selected</button>
+          </section>
         </section>
       </article>
 
@@ -321,6 +330,14 @@
       name: 'pumps',
       source: pumps
     });
+
+    function toggle(source) {
+    var checkboxes = document.querySelectorAll('input[class="checked"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
+    }
+}
   </script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="js/script.js" charset="utf-8"></script>
