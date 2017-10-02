@@ -1,6 +1,6 @@
-<article id="Inspiration" class="tabcontent">
+<article id="Inspiration" class="tabcontent inspiration">
   <aside class="filterCategory">
-    <p>Sort by category</p>
+    <h3>Sort by category</h3>
     <ul>
       <li>
         <input type="checkbox" name="generel">
@@ -32,7 +32,7 @@
       </li>
       <li>
         <input type="checkbox" name="usp">
-        <label for="productImages">Unique Selling Points (USP)</label>
+        <label for="productImages">Unique Selling Points</label>
       </li>
       <li>
         <input type="checkbox" name="publications">
@@ -41,38 +41,44 @@
     </ul>
   </aside>
 
+<section class="inspirationArticles">
   <section class="inspArticle">
-    <img src="img/grundfosWaterUtilityRangeBrochure.jpg" alt="Grundfos Water Utility Range Brochure">
-    <article class="more">
-    <h3 class="inspHeadline">How to use your new Grundfos Brochure</h3>
-    <p class="date">21/09/17</p>
-    <p>We have just visited your shop and handed you our new Grundfos brochure. The new Grundfos Water Utility Range Brochure is presenting our competencies within water supply and wastewater and our product offerings for optimised water solutions.</p>
-    <p>At Grundfos, we are meeting the challenges facing the water supply and wastewater industry head on. The Range Brochure tells how we design lifecycle costs into solutions to make life easier for everyone.</p>
-    <p>Use the brochure to inspire you costumers to make a different when choosing products for their work </p>
-    <button class="primaryActionButton">Find brochure</button>
-    </article>
-    <button class="readMore">Read more</button>
+    <section>
+      <img src="img/grundfosWaterUtilityRangeBrochure.jpg" alt="Grundfos Water Utility Range Brochure">
+      <article class="more">
+        <h3 class="inspHeadline">How to use your new Grundfos Brochure</h3>
+        <p class="date">21/09/17</p>
+        <p>We have just visited your shop and handed you our new Grundfos brochure. The new Grundfos Water Utility Range Brochure is presenting our competencies within water supply and wastewater and our product offerings for optimised water solutions.</p>
+        <p>At Grundfos, we are meeting the challenges facing the water supply and wastewater industry head on. The Range Brochure tells how we design lifecycle costs into solutions to make life easier for everyone.</p>
+        <p>Use the brochure to inspire you costumers to make a different when choosing products for their work </p>
+        <button class="primaryAction">Find brochure</button>
+      </article>
+    </section>
+    <button class="secondaryAction">Read more</button>
     <div class="notifikation">1</div>
   </section>
 
   <section class="inspArticle">
-    <img src="img/ALPHA2.jpg" alt="ALPHA 2 Pump">
-    <article class="more">
-    <h3 class="inspHeadline">New online material to ALPHA2</h3>
-    <p class="date">21/09/17</p>
-    <p>The classic ALPHA2 pump is still very popular among the installers. We have updated our material and made it more modern for you to use.</p>
-    <p>In the new marketing material you will find two updated webbanners, new product image both for web and print together with an updated list of Unique Selling Points (USP).</p>
-    <img src="img/ALPHA2_application_image_1200x800px.jpg" alt="ALPHA2 application">
-    <img src="img/ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg" alt="ALPHA2 webbanner">
-    <img src="img/ALPHA2_circulator_webbanner_728x90px_ENGLISH.jpg" alt="ALPHA2 webbanner">
-    <img src="img/ALPHA2_product_image_1200x1200px.jpg" alt="ALPHA2 pump">
-    <button class="primaryActionButton">Find material</button>
-    </article>
-    <button class="readMore">Read more</button>
+    <section>
+      <img src="img/ALPHA2.jpg" alt="ALPHA 2 Pump">
+      <article class="more">
+        <h3 class="inspHeadline">New online material to ALPHA2</h3>
+        <p class="date">21/09/17</p>
+        <p>The classic ALPHA2 pump is still very popular among the installers. We have updated our material and made it more modern for you to use.</p>
+        <p>In the new marketing material you will find two updated webbanners, new product image both for web and print together with an updated list of Unique Selling Points (USP).</p>
+        <img src="img/ALPHA2_application_image_1200x800px.jpg" alt="ALPHA2 application">
+        <img src="img/ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg" alt="ALPHA2 webbanner">
+        <img src="img/ALPHA2_circulator_webbanner_728x90px_ENGLISH.jpg" alt="ALPHA2 webbanner">
+        <img src="img/ALPHA2_product_image_1200x1200px.jpg" alt="ALPHA2 pump">
+        <button class="primaryAction">Find material</button>
+      </article>
+    </section>
+    <button class="secondaryAction">Read more</button>
     <div class="notifikation">1</div>
   </section>
 
   <section class="inspArticle">
+    <section>
     <img src="img/rollUp.jpeg" alt="">
     <article class="more">
     <h3 class="inspHeadline">Get the most out of your roll ups</h3>
@@ -82,7 +88,9 @@
     <p>Use our roll up banners for your store, your promotion events or any other occassion where you might find it useful</p>
     <img src="img/rollUpExhibition.jpg" alt="Grundfos roll up banner exhibition">
     </article>
-    <button class="readMore">Read more</button>
   </section>
+    <button class="secondaryAction">Read more</button>
+  </section>
+</section>
 
 </article>

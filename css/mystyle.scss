@@ -150,10 +150,7 @@ main.marketing-main{
           -ms-flex-direction: column;
               flex-direction: column;
       h3 {
-        font-size: 13px;
-        color: #727272;
-        margin-top: 18px;
-        margin-bottom: 9px;
+        color: $secondTextColor;
       }
       p {
         font-size: 13px;
@@ -454,13 +451,75 @@ table{
   }
 }
 
-/* ----------------------------------------- My material ---------------------------------------*/
+/* ----------------------------------------- My material og Inpiration ---------------------------------------*/
 
+main.marketing-main .myMaterial, main.marketing-main .inspiration {
+  flex-direction: row;
+}
 
+.main-content aside.filterCategory {
+  width: 20%;
+  background-color: $advancedSearch;
+  border: 1px solid $tableBorder;
+  margin: 1%;
+  height: 100%;
+  padding: 0;
+  h3 {
+    padding: 1em 0.5em ;
+  }
+  li {
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  }
+}
+/* ________ My material __________*/
+.my-material {
+  width: 80%;
+  .product-thumb {
+    width: 22%;
+  }
+  .generelProducts {
+    width: 100%;
+  }
+  .product-thumb, .generelProducts{
+    margin: 1%;
+    border: 1px solid $tableBorder;
+    text-align: center;
+    display: inline-block;
+    &:last-child {
+      img {
+        width: 500px; }
+    }
+    h3 {
+      border-top: 1px solid $tableBorder;
+      padding: 10px;
+    }
+    img {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
 
-/* ----------------------------------------- Inspiration ---------------------------------------*/
-#Inspiration {
-  img {
-    width: 100px;
+/* ________ My material __________*/
+.inspirationArticles {
+  width: 80%;
+  .inspArticle {
+    width: 100%;
+    margin: 1%;
+    border: 1px solid $tableBorder;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    section {
+      display: flex;
+    }
+    img {
+      width: 20%;
+      height: 200px;
+    }
+    .more {
+      width: 80%;
+    }
   }
 }
