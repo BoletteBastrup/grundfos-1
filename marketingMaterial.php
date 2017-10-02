@@ -16,7 +16,7 @@
         <p class="padding-bottom">Search ‘All’ or add product(s) to search list</p>
 
         <div id="searchBar">
-          <input id="addProduct" class="awesomplete inputPump inputSmall" data-list="Alpha 1, Alpha 2, Alpha 3" v-model="newProduct" @keyup.enter="addProduct" placeholder="Add product(s)">
+          <input id="addProduct" onclick="submitPump()" class="awesomplete inputPump inputSmall" data-list="Alpha 1, Alpha 2, Alpha 3" v-model="newProduct" @keyup.enter="addProduct" placeholder="Add product(s)">
           <button @click="addProduct" class="iconButton"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
 

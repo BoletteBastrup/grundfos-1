@@ -1,11 +1,14 @@
-$('#submit').click(function() {
-  document.getElementById("searchResult").style.display = "block";
-});
+function submitPump() {
+  var input = document.getElementsByClassName("tt-input")[0];
+  var pump = input.value;
+  if (input.value === "Alpha 2") {
+    document.getElementById("searchResult").style.display = "block";
+  }
+};
 
 $('#advancedSearch').click(function() {
   $('.displayNone').toggleClass("show");
 });
-
 
 
 //TABS UNDER MARKETING MATERIAL
