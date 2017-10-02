@@ -2,19 +2,57 @@
   <form>
     <h3>My pump models</h3>
     <ul>
-      <li><input type="checkbox">ALPHA 2</li>
-      <li><input type="checkbox">ALPHA 3</li>
-      <li><input type="checkbox">CONLIFT</li>
-      <li><input type="checkbox">CRN</li>
-      <li><input type="checkbox">Magna</li>
-      <li><input type="checkbox">SEG</li>
-      <li><input type="checkbox">SPK</li>
-      <li><input type="checkbox">SQU</li>
-      <li><input type="checkbox">TP</li>
-      <li><input type="checkbox">UNILIFT AP</li>
-      <li><input type="checkbox">UNILIFT CC</li>
-      <li><input type="checkbox">UNILIFT KP</li>
-      <li><input type="checkbox">UP</li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">ALPHA 2</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">ALPHA 3</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">CONLIFT</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">CRN</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">MAGNA</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">SEG</label>
+      </li>
+      <li><input type="checkbox">
+        <label for="productImages">SPK</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">SQU</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">TP</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">UNILIFT AP</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">UNILIFT CC</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">UNILIFT KP</label>
+      </li>
+      <li>
+        <input type="checkbox">
+        <label for="productImages">UP</label>
+      </li>
     </ul>
   </form>
   <section class="my-material">
