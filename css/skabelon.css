@@ -1,21 +1,21 @@
 /*
-Error: Invalid US-ASCII character "\xC3"
-        on line 259 of /Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss
+Error: Invalid US-ASCII character "\xE2"
+        on line 29 of /Applications/MAMP/htdocs/GitHub/grundfos/css/skabelon.scss
 
-254:   	border-left: 10px solid transparent;
-255:   	border-right: 10px solid transparent;
-256:   }
-257: }
-258: 
-259: //Autocomplete dropdown (søgeforslag/felt)
-260: .prefetch {
-261:   display: -webkit-box;
-262:   display: -ms-flexbox;
-263:   display: flex;
-264:   span.twitter-typeahead {
+24: }
+25: 
+26: //Fonte
+27: @font-face {
+28: font-family: MyWebfont;
+29: src: url(GrundfosTheSansV2SemiLight.woff2) format(”woff2”);
+30: }
+31: 
+32: @font-face {
+33: font-family: MyWebfont;
+34: src: url(GrundfosTheSansV2SemiLight.woff) format(”woff”);
 
 Backtrace:
-/Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss:259
+/Applications/MAMP/htdocs/GitHub/grundfos/css/skabelon.scss:29
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1296:in `rescue in block in find_encoding_error'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1293:in `block in find_encoding_error'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1292:in `each'
@@ -36,4 +36,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid US-ASCII character \"\xC3\"\A         on line 259 of /Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss\A \A 254:   	border-left: 10px solid transparent;\A 255:   	border-right: 10px solid transparent;\A 256:   }\A 257: }\A 258: \A 259: //Autocomplete dropdown (søgeforslag/felt)\A 260: .prefetch {\A 261:   display: -webkit-box;\A 262:   display: -ms-flexbox;\A 263:   display: flex;\A 264:   span.twitter-typeahead {"; }
+  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 29 of /Applications/MAMP/htdocs/GitHub/grundfos/css/skabelon.scss\A \A 24: }\A 25: \A 26: //Fonte\A 27: @font-face {\A 28: font-family: MyWebfont;\A 29: src: url(GrundfosTheSansV2SemiLight.woff2) format(”woff2”);\A 30: }\A 31: \A 32: @font-face {\A 33: font-family: MyWebfont;\A 34: src: url(GrundfosTheSansV2SemiLight.woff) format(”woff”);"; }
