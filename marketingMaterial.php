@@ -224,3 +224,17 @@
     </section>
   </section>
 </article>
+
+<!-- ANIMATION TIL ÅBNING AF DETAILS OG SUMMARY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js" charset="utf-8"></script>
+<script type="text/javascript">
+$('details summary').each(function(){
+    $(this).nextAll().wrapAll('<div id="wrap"></div>');
+});
+$('details summary').click(function(e) {
+    e.preventDefault();
+    $(this).siblings('div#wrap').slideToggle(function(){
+        $(this).parent('details').toggleClass('open');
+    });
+});
+</script>

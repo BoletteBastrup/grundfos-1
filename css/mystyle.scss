@@ -198,10 +198,6 @@ main.marketing-main{
     background-color: $lightGrey;
   }
 }
-section:nth-child(3){
-  margin: 10px 0px;
-}
-
 
 #advancedSearchBox {
   background-color: $advancedSearch;
@@ -364,6 +360,21 @@ section.up-arrow {
 }
 
 //arketing material tabel
+//CSS KLASSER TIL ANIMATION AF ÅBNING AF DETAILS OG SUMMARY
+summary::-webkit-details-marker { //Fjerner standard summary pil
+    display: none;
+}
+summary:before { //Tilføjer summary pil
+    content: "▼";
+}
+details.open summary:before { //Tilføjer summary pil
+    content: "►";
+}
+summary:before, summary:after { //Styling til tilføjet summary pil
+    font-size:.8em;
+    margin-right:6px;
+}
+
 #table-header{
   color: #fff;
   width: calc(100% + 1px);
