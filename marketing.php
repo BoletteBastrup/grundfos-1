@@ -76,7 +76,7 @@
     <!-- include tab contents -->
     <?php include 'marketingMaterial.php' ?>
     <?php include 'myMaterial.php' ?>
-    <?php include 'inspiration' ?>
+    <?php include 'inspiration.php' ?>
 
     </main>
   </section>
