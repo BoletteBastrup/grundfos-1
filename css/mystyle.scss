@@ -32,6 +32,11 @@ ul {
   list-style: none;
 }
 
+button, input {
+  font-size: 1em;
+  font-family: MyWebfont, Verdana, sans-serif;
+}
+
 //Styling af checkboxe
 [type=checkbox] {
   -webkit-appearance: none;
@@ -47,6 +52,7 @@ ul {
     content: '\2713';
   	font-size: 12px;
   	position: absolute;
+    padding-left: 2px;
   }
 }
 
@@ -54,7 +60,7 @@ ul {
 .primaryAction{
   background-color: $primaryButton;
   padding: 0.8em 2.5em;
-  border: 1px solid $lightGrey;
+  border: none;
   color: white;
   position: absolute;
   right: 0;
@@ -82,7 +88,7 @@ ul {
 }
 
 .iconButton {
-  padding: 12px;
+  width: 40px;
   border: none;
   margin-left: -1px;
   &:hover {
@@ -168,11 +174,12 @@ main.marketing-main{
 }
 /* ----------------------------------------- MARKETING MATERIALE ---------------------------------------*/
 #advancedSearch {
-  padding: 12px 30px;
+  padding: 0 30px;
   margin-left: 5px;
-  background-color: $advancedSearch;
-  border: 0.5px solid $tableBorder;
+  background-color: #fcfcfc;
+  border: 0.5px solid #c9c9c9;
   cursor: pointer;
+  height: 41px;
   &:hover {
     background-color: $lightGrey;
   }
@@ -245,7 +252,7 @@ section.up-arrow {
   &:after {
   	content: '';
   	position: absolute;
-  	left: 770px;
+  	left: 544px;
   	bottom: 100%;
   	width: 0;
   	height: 0;
@@ -334,12 +341,11 @@ section.up-arrow {
     display:block;
   }
   img {
-    position: fixed;
-    top: 100px;
-    left: 35%;
-    width: 400px;
-    height: 400px;
-    border: 1px solid $textColor;
+    max-width: 600px;
+    max-height: 200px;
+    border: 1px solid $tableBorder;
+    margin-top: -50%;
+    margin-left: 20px;
   }
 }
 
@@ -352,11 +358,15 @@ section.up-arrow {
   border-right: 1px solid $tableBorder;
   border-left: 1px solid $tableBorder;
   border-top: 1px solid $tableBorder;
+  border-collapse: unset;
   &:active {
     outline: none;
   }
   tr{
     padding: 8px;
+  }
+  .td-size {
+    text-align:left;
   }
 }
 
@@ -413,17 +423,33 @@ table{
       width: 2%;
     }
     .td-name{
-      width: 81%;
-      //width: 65%;
+      width: 57%;
+    }
+    .td-type {
+      width:15%;
+      .typeLabel {
+        background-color: $tableBorder;
+        color: white;
+        padding: .3em .8em;
+        font-size: 0.9em;
+        width: 45px;
+        display: block;
+        text-align: center;
+      }
     }
     .td-file{
-      width: 5%;
+      width: 7%;
     }
     .td-size{
-      width: 5%;
+      width: 4%;
+      text-align:right;
+      padding-right: 0;
+    }
+    .td-unit {
+      width:6%
     }
     .td-update{
-      width: 5%
+      width: 7%
     }
   }
 }

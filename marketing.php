@@ -132,8 +132,9 @@
     for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i] != source)
             checkboxes[i].checked = source.checked;
-    }
-}
+    }};
+
+
   </script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="js/script.js" charset="utf-8"></script>
