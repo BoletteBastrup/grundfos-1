@@ -60,3 +60,15 @@ new Vue({
 
 }
 });
+
+$(".seeMore").click(function(){
+  var val = $(this).text();
+if (val == "Read more") {
+  $(this).parent().css('height', 'auto');
+  $(this).text("Read less");
+} else {
+  $(this).parent().css('height', '170px');
+  $(this).text("Read more");
+}
+  return false;
+  });

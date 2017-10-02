@@ -1,21 +1,21 @@
 /*
 Error: Invalid US-ASCII character "\xC3"
-        on line 263 of /Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss
+        on line 280 of /Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss
 
-258:   	border-left: 10px solid transparent;
-259:   	border-right: 10px solid transparent;
-260:   }
-261: }
-262: 
-263: //Autocomplete dropdown (søgeforslag/felt)
-264: .prefetch {
-265:   display: -webkit-box;
-266:   display: -ms-flexbox;
-267:   display: flex;
-268:   span.twitter-typeahead {
+275:   	border-left: 10px solid transparent;
+276:   	border-right: 10px solid transparent;
+277:   }
+278: }
+279: 
+280: //Autocomplete dropdown (søgeforslag/felt)
+281: .prefetch {
+282:   display: -webkit-box;
+283:   display: -ms-flexbox;
+284:   display: flex;
+285:   span.twitter-typeahead {
 
 Backtrace:
-/Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss:263
+/Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss:280
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1296:in `rescue in block in find_encoding_error'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1293:in `block in find_encoding_error'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1292:in `each'
@@ -36,4 +36,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid US-ASCII character \"\xC3\"\A         on line 263 of /Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss\A \A 258:   	border-left: 10px solid transparent;\A 259:   	border-right: 10px solid transparent;\A 260:   }\A 261: }\A 262: \A 263: //Autocomplete dropdown (søgeforslag/felt)\A 264: .prefetch {\A 265:   display: -webkit-box;\A 266:   display: -ms-flexbox;\A 267:   display: flex;\A 268:   span.twitter-typeahead {"; }
+  content: "Error: Invalid US-ASCII character \"\xC3\"\A         on line 280 of /Applications/MAMP/htdocs/GitHub/grundfos/css/mystyle.scss\A \A 275:   	border-left: 10px solid transparent;\A 276:   	border-right: 10px solid transparent;\A 277:   }\A 278: }\A 279: \A 280: //Autocomplete dropdown (søgeforslag/felt)\A 281: .prefetch {\A 282:   display: -webkit-box;\A 283:   display: -ms-flexbox;\A 284:   display: flex;\A 285:   span.twitter-typeahead {"; }
