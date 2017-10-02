@@ -1,4 +1,4 @@
-//Colors
+//Variabler
 $lightBlue:                #8cbbdd;
 $textColor:                #333333;
 $secondTextColor:          #727272;
@@ -12,30 +12,34 @@ $advancedSearch:           #fcfcfc;
 $tableBorder:              #c9c9c9;
 $grundfosBlue:             #11497c;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  &:focus {
-    outline: none;
-  }
+//Generel styling for body
+body {
+  font-family: MyWebfont, Verdana, sans-serif;
+  font-size: 12px;
+  background-color: #f5f5f5;
 }
 
 h1, h2 {
   font-size: 1.8em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ul {
   list-style: none;
 }
 
+//Styling af checkboxe
 [type=checkbox] {
   -webkit-appearance: none;
--moz-appearance: none;
-background-color: #fafafa;
-border: 1px solid #cacece;
-width: 15px;
-height: 15px;
+  -moz-appearance: none;
+  background-color: white;
+  border: 1px solid $tableBorder;
+  width: 15px;
+  height: 15px;
   &:focus {
     outline:none;
   }
@@ -46,10 +50,24 @@ height: 15px;
   }
 }
 
+//Botton
+.primaryAction{
+  background-color: $primaryButton;
+  padding: 0.8em 2.5em;
+  border: 1px solid $lightGrey;
+  color: white;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primaryButtonMouseOver;
+  }
+}
 
 .secondaryAction {
   color: white;
-  background-color: #3386c3;
+  background-color: $secondaryButton;
   padding: 0.8em 2.5em;
   border: none;
   float: right;
@@ -57,54 +75,23 @@ height: 15px;
   margin-right: -3em;
   margin-bottom: -0.5em;
   font-weight: bold;
+
   &:hover {
     background-color:$secondaryButtonMouseOver;
   }
-  &:focus {
-    outline:none;
+}
+
+.iconButton {
+  padding: 12px;
+  border: none;
+  margin-left: -1px;
+  &:hover {
+    color: white;
+    cursor: pointer;
   }
 }
 
-.inputLarge {
-  width:400px;
-}
-
-.textSpace {
-  padding-bottom: 1em;
-}
-
-
-@font-face {
-font-family: MyWebfont;
-src: url(GrundfosTheSansV2SemiLight.woff2) format(”woff2”);
-}
-
-@font-face {
-font-family: MyWebfont;
-src: url(GrundfosTheSansV2SemiLight.woff) format(”woff”);
-}
-
-@font-face {
-font-family: MyWebfont;
-src: url(GrundfosTheSansV2SemiLight.eot);
-}
-
-@font-face {
-font-family: MyWebfont;
-src: url("GrundfosTheSansV2SemiLight.svg#GrundfosTheSansV2SemiLight") format("svg");
-}
-
-body {
-  font-family: MyWebfont, Verdana, sans-serif;
-  font-size: 12px;
-  background-color: #f5f5f5;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
+//Toggle funktion
 .displayNone {
   display: none;
 }
@@ -113,212 +100,7 @@ a {
   display: block;
 }
 
-.iconButton {
-  padding: 12px;
-  //margin-left: -4px;
-}
-
-header {
-  background-color: $grundfosBlue;
-  padding: 0 50px;
-  .top {
-    ul {
-      display: flex;
-      list-style-type: none;
-      justify-content: flex-end;
-      padding-top: 5px;
-      li {
-        color: #8cbbdd;
-        margin-left: 50px;
-        display: flex;
-        align-items: center;
-        img {
-          width: 13px;
-          margin-right: 5px;
-        }
-        i.fa-angle-down {
-          margin-left: 5px;
-          color: white;
-        }
-        i.fa-user {
-          margin-right: 5px;
-          color: white;
-        }
-      }
-    }
-  }
-  .bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0 20px 0;
-    input {
-      width: 275px;
-      border: none;
-      padding: 10px;
-      background: #246198;
-      color: #6a9bc6;
-    }
-  }
-}
-nav.mainNav {
-  background: #dcdcdc;
-  border-bottom: 1px solid #cacaca;
-  padding-left: 35px;
-  ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0 15px;
-    li {
-      margin-right: 20px;
-      padding: 15px 5px;
-      &:hover {
-        background-color: #f5f5f5;
-      }
-      a {
-        color: black;
-      }
-    }
-    .active {
-      border-bottom: 4px solid #3587c3;
-    }
-  }
-}
-
-.breadcrumbs {
-  padding: 20px 0 0 50px;
-  a, span {
-    color: #727272;
-    font-size: 13px;
-  }
-}
-
-.main-content {
-  display: flex;
-  aside {
-    width: 25%;
-    padding: 20px 0 0 50px;
-    h1, h2 {
-      margin-bottom: 10px;
-    }
-    nav.sideNav {
-      ul {
-        list-style-type: none;
-        li {
-          border-top: 1px solid #ddd;
-          padding: 10px 0;
-          color: #727272;
-          &:hover {
-            background-color:white;
-            cursor: pointer;
-          }
-          &:last-child {
-            margin-bottom: 20px;
-          }
-          a {
-            color: #727272;
-            display: block;
-            width: 100%;
-            height: 100%
-          }
-        }
-      }
-    }
-  }
-
-  .sideNav ul li.active{
-      background-color: #127bbd;
-      color: white;
-      padding: 10px 5px;
-      &:hover {
-        background-color: #127bbd;
-        color: white;
-        padding: 10px 5px;
-      }
-  }
-
-  main {
-    width: 75%;
-    margin: 57px 0 0 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-right: 50px;
-    .module {
-      width: 48%;
-      border: 1px solid #c9c9c9;
-      margin-bottom: 25px;
-      background-color: white;
-      &:last-child {
-        width: 100%;
-      }
-      h3 {
-        background: #dedede;
-        border-bottom: 1px solid #c9c9c9;
-        padding: 15px;
-        text-transform: uppercase;
-        font-size: 1em;
-      }
-      p {
-        padding: 10px 0 10px 15px;
-      }
-      .module-search {
-        padding: 10px 15px 10px 15px;
-        display: flex;
-        input {
-          padding: 10px;
-          width: 90%;
-          &:focus {
-            outline: none;
-          }
-        }
-        button {
-          width: 10%;
-          margin-left: -1px;
-          border: none;
-          &:hover {
-            color: white;
-            cursor: pointer;
-          }
-          &:focus {
-            outline: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-footer {
-  background-color: $grundfosBlue;
-  padding: 20px 50px;
-  .be-think-innovate {
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid #33648f;
-    img {
-      margin-bottom: 15px;
-    }
-  }
-  .contact {
-    h4 {
-      color: white;
-      margin: 10px 0;
-    }
-    ul {
-      list-style-type: none;
-      margin-bottom: 10px;
-      li {
-        color: #72a1cf;
-      }
-    }
-    a {
-      color: #8cbbdd;
-      display:block;
-      margin: 50px;
-    }
-  }
-}
-
+//Marketing module
 main.marketing-main{
   display: block;
   article.tab {
@@ -334,6 +116,7 @@ main.marketing-main{
         text-transform: uppercase;
         cursor: pointer;
         padding: 14px 16px;
+        -webkit-transition: 0.3s;
         transition: 0.3s;
         font-size: 13px;
         background-color: #e4e4e4;
@@ -356,7 +139,10 @@ main.marketing-main{
       background: white;
       margin-top: -2px;
       margin-bottom: 100px;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       h3 {
         font-size: 13px;
         color: #727272;
@@ -378,10 +164,6 @@ main.marketing-main{
       div.awesomeplete {
         width: 100%;
       }
-      button {
-        font-family: 'lucida Grande';
-        font-size: 12px;
-      }
   }
 }
 /* ----------------------------------------- MARKETING MATERIALE ---------------------------------------*/
@@ -398,32 +180,7 @@ main.marketing-main{
 section:nth-child(3){
   margin: 10px 0px;
 }
-#productResult {
-  width: 70%;
-  ul {
-    border: 0.5px solid $tableBorder;
-    width: 63%;
-    background-color: white;
-  }
-  li {
-    display: flex;
-    border-bottom: 0.5px solid $tableBorder;
-    padding: 0px 6px 0px 10px;
-    justify-content: space-between;
-    button {
-      padding: 10px;
-      border: none;
-      background-color: transparent;
-      font-weight: bold;
-      color: $secondTextColor;
-      opacity: 0.5;
-      &:hover {
-        opacity: 1;
-        cursor: pointer;
-      }
-    }
-  }
-}
+
 
 #advancedSearchBox {
   background-color: $advancedSearch;
@@ -431,12 +188,53 @@ section:nth-child(3){
   padding: 2em 5em;
   margin: 2em 0 1em 0;
   #advancedSearchFlex {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
+    #productResult {
+      width: 70%;
+      #searchBar{
+      	display: -webkit-box;
+      	display: -ms-flexbox;
+      	display: flex;
+      }
+      ul {
+        width: 100%;
+      }
+      li {
+        width: 55%;
+        background-color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border: 1px solid $tableBorder;
+        margin-top: -1px;
+        padding: 0px 6px 0px 10px;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        button {
+          padding: 10px;
+          border: none;
+          background-color: transparent;
+          font-weight: bold;
+          color: $secondTextColor;
+          opacity: 0.5;
+          &:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
   #category {
     li {
       padding-bottom:1em;
     }
+  }
+  .padding-bottom {
+    padding-bottom: 1em;
   }
 }
 
@@ -447,7 +245,7 @@ section.up-arrow {
   &:after {
   	content: '';
   	position: absolute;
-  	left: 510px;
+  	left: 770px;
   	bottom: 100%;
   	width: 0;
   	height: 0;
@@ -457,7 +255,54 @@ section.up-arrow {
   	border-right: 10px solid transparent;
   }
 }
+
+//Autocomplete dropdown (søgeforslag/felt)
+.prefetch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  span.twitter-typeahead {
+    width: 50%;
+    .tt-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    border-radius: .3em;
+    margin: .2em 0 0;
+    background: hsla(0,0%,100%,.9);
+    background: -webkit-gradient(linear, left top, right bottom, from(white), to(hsla(0,0%,100%,.8)));
+    background: linear-gradient(to bottom right, white, hsla(0,0%,100%,.8));
+    border: 1px solid rgba(0,0,0,.3);
+    -webkit-box-shadow: 0.05em 0.2em 0.6em rgba(0,0,0,.2);
+            box-shadow: 0.05em 0.2em 0.6em rgba(0,0,0,.2);
+    text-shadow: none;
+      .tt-dataset {
+        .tt-suggestion {
+          position: relative;
+          padding: .2em .5em;
+          cursor: pointer;
+          &:hover {
+            background: hsl(200, 40%, 80%);
+            color: black;
+          }
+        }
+      }
+    }
+    .tt-input, .tt-hint {
+      padding: 12px;
+      width: 100%;
+      border: 1px solid $tableBorder;
+    }
+    .tt-hint {
+      color: rgba(0,0,0,.5);
+    }
+  }
+}
+
 /*____________________RESULTAT______________________*/
+
 #searchResult {
   border-top: 1px solid $tableBorder;
   margin-top: 20px;
@@ -470,18 +315,6 @@ section.up-arrow {
     padding: 20px 0px;
     .selectBox {
       width: 100%;
-    }
-    button {
-      background-color: $primaryButton;
-      padding: 10px 20px;
-      border: 0.5px solid $lightGrey;
-      color: white;
-      position: absolute;
-      right: 0;
-      cursor: pointer;
-      &:hover {
-        background-color: $primaryButtonMouseOver;
-      }
     }
     label {
       vertical-align: bottom;
@@ -510,8 +343,7 @@ section.up-arrow {
   }
 }
 
-
-
+//arketing material tabel
 #table-header{
   color: #fff;
   width: calc(100% + 1px);
@@ -544,6 +376,7 @@ details{
   &:focus {
     outline: none;
   }
+
   summary{
     padding: 8px;
     background-color: $lightBlue;
@@ -577,7 +410,7 @@ details{
         border-top: 1px solid $tableBorder;
 
         td{
-          padding: 5px 4px; //TODO: Har ændret 5 px, fra 2, det gav mere rum?
+          padding: 5px 4px;
         }
 
         .td-name{
@@ -588,70 +421,13 @@ details{
   }
 }
 
-.tt-menu {
-min-width: 100%;
-box-sizing: border-box;
-list-style: none;
-padding: 0;
-border-radius: .3em;
-margin: .2em 0 0;
-background: hsla(0,0%,100%,.9);
-background: linear-gradient(to bottom right, white, hsla(0,0%,100%,.8));
-border: 1px solid rgba(0,0,0,.3);
-box-shadow: 0.05em 0.2em 0.6em rgba(0,0,0,.2);
-text-shadow: none;
-  .tt-dataset {
-    .tt-suggestion {
-      position: relative;
-      padding: .2em .5em;
-      cursor: pointer;
-      &:hover {
-        background: hsl(200, 40%, 80%);
-        color: black;
-      }
-    }
-  }
-}
-
-.prefetch {
-  display: flex;
-  span.twitter-typeahead {
-    .tt-input, .tt-hint {
-      padding: 10px;
-    }
-    .tt-hint {
-      color: rgba(0,0,0,.5);
-    }
-  }
-}
+/* ----------------------------------------- My material ---------------------------------------*/
 
 
 
-
-
+/* ----------------------------------------- Inspiration ---------------------------------------*/
 #Inspiration {
   img {
     width: 100px;
   }
-}
-
-
-
-
-
-
-
-
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-color: #6a9bc6;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #6a9bc6;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #6a9bc6;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #6a9bc6;
 }

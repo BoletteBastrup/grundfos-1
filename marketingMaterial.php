@@ -12,8 +12,8 @@
   <section id="advancedSearchBox" class="displayNone up-arrow">
 
     <div id="advancedSearchFlex">
-      <section id="productResult"> 
-        <p class="textSpace">Search ‘All’ or add product(s) to search list</p>
+      <section id="productResult">
+        <p class="padding-bottom">Search ‘All’ or add product(s) to search list</p>
 
         <div id="searchBar">
           <input id="addProduct" class="awesomplete inputPump inputSmall" data-list="Alpha 1, Alpha 2, Alpha 3" v-model="newProduct" @keyup.enter="addProduct" placeholder="Add product(s)">
@@ -38,7 +38,7 @@
       </section>
 
       <section id="category">
-        <p class="textSpace">Category</p>
+        <p class="padding-bottom">Category</p>
         <ul>
           <li>
             <input type="checkbox" name="productImages">
@@ -196,7 +196,7 @@
         <input type="checkbox">
         <label for="">Deselect All</label>
       </article>
-      <button>Download Selected</button>
+      <button class="primaryAction">Download Selected</button>
     </section>
   </section>
 </article>

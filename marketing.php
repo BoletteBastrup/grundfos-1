@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>My Grundfos</title>
+  <link rel="stylesheet" href="css/skabelon.min.css">
   <link rel="stylesheet" href="css/mystyle.min.css">
   <link rel="stylesheet" href="css/awesomplete.css">
   <link rel="stylesheet" href="fontawesome/scss/font-awesome.min.css">
