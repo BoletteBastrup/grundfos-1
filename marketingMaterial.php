@@ -77,10 +77,12 @@
     <p>Results</p>
     <table id="table-header">
       <tr>
-        <td>Title</td>
-        <td>File</td>
-        <td>Size</td>
-        <td>Updated</td>
+        <td class="td-checkbox"></td>
+        <td class="showImage"></td>
+        <td class="td-name">Title</td>
+        <td class="td-file">File</td>
+        <td class="td-size">Size</td>
+        <td class="td-update">Update</td>
       </tr>
     </table>
     <details open>
@@ -89,68 +91,68 @@
         <summary>Product Images</summary>
         <table>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_application_image</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_product_image</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_application_image_1200x800px</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_product_image_62x62px</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_product_image1200x1651</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
         </table>
       </details>
@@ -158,20 +160,20 @@
         <summary>Webbanners</summary>
         <table>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_webbanner_300x250px_ENGLISH</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_circulator_webbanner_728x90px_ENGLISH</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
         </table>
       </details>
@@ -179,12 +181,12 @@
         <summary>Unique Selling Points (USP)</summary>
         <table>
           <tr>
-            <td><input type="checkbox" class="checked"></td>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/proeve.png" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_UPSs</td>
-            <td>png</td>
-            <td>41kb</td>
-            <td>17/09/21</td>
+            <td class="td-file">png</td>
+            <td class="td-size">41kb</td>
+            <td class="td-update">17/09/21</td>
           </tr>
         </table>
       </details>

@@ -356,15 +356,7 @@ section.up-arrow {
     outline: none;
   }
   tr{
-
-    td{
-      width: 1%;
-
-      &:nth-child(1){
-        width: 13%;
-        padding-left: 75px;
-      }
-    }
+    padding: 8px;
   }
 }
 
@@ -401,22 +393,37 @@ details{
         outline: none;
       }
     }
+  }
+}
 
-    table{
-      width: 100%;
-      border-collapse: collapse;
+table{
+  width: 100%;
+  border-collapse: collapse;
 
-      tr{
-        border-top: 1px solid $tableBorder;
+  tr{
+    border-top: 1px solid $tableBorder;
 
-        td{
-          padding: 5px 4px;
-        }
-
-        .td-name{
-          width: 65%;
-        }
-      }
+    td{
+      padding: 5px 4px;
+    }
+    .td-checkbox{
+      width: 2%;
+    }
+    .showImage{
+      width: 2%;
+    }
+    .td-name{
+      width: 81%;
+      //width: 65%;
+    }
+    .td-file{
+      width: 5%;
+    }
+    .td-size{
+      width: 5%;
+    }
+    .td-update{
+      width: 5%
     }
   }
 }
