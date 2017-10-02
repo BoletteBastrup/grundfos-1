@@ -7,7 +7,11 @@ function submitPump() {
 };
 
 $('#advancedSearch').click(function() {
-  $('.displayNone').toggleClass("show");
+  $('#advancedSearchBox').toggleClass("show");
+});
+
+$('.product-thumb').click(function() {
+  $('.productMaterial').toggleClass("show");
 });
 
 
@@ -44,7 +48,7 @@ new Vue({
 //Methods for Preperation
 	addProduct: function () {
 			var productItem = this.newProduct.trim();
-			if (productItem) {
+			if (productItem == "ALPHA2" || productItem == "CMBE" || productItem == "MAGNA") {
 				this.productItems.push({
 					text: productItem,
 					checked: false

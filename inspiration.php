@@ -1,4 +1,4 @@
-<article id="Inspiration" class="tabcontent inspiration">
+<article id="inspiration" class="tabcontent inspiration">
   <aside class="filterCategory">
     <h3>Sort by category</h3>
     <ul>

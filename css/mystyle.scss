@@ -49,9 +49,15 @@ button, input {
   height: 18px;
   color: white;
   font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 //Styling af checkboxe
@@ -218,7 +224,7 @@ main.marketing-main{
       ul {
         width: 100%;
       }
-      li {
+      .productList li {
         width: 55%;
         background-color: white;
         display: -webkit-box;
@@ -455,9 +461,9 @@ table{
       .typeLabel {
         background-color: $tableBorder;
         color: white;
-        padding: .3em .8em;
-        font-size: 0.9em;
-        width: 45px;
+        padding: .3em 0em;
+        font-size: 0.8em;
+        width: 39px;
         display: block;
         text-align: center;
       }
@@ -482,7 +488,10 @@ table{
 /* ----------------------------------------- My material og Inpiration ---------------------------------------*/
 
 main.marketing-main .myMaterial, main.marketing-main .inspiration {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .main-content aside.filterCategory {
@@ -491,26 +500,56 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
   border: 1px solid $tableBorder;
   margin: .8%;
   height: 100%;
-  padding: 0;
+  padding: 1em 0.5em;
   h3 {
-    padding: 1em 0.5em ;
+    padding-bottom: 1em;
   }
   li {
   padding-bottom: 1em;
-  padding-left: 0.5em;
+  }
+}
+
+.filterCategory form{
+  p.newUpdates{
+    color: $notifikationRed;
+  }
+  ul{
+    li:first-child{
+      border-bottom: 1px dashed $tableBorder;
+      margin-bottom: 1em;
+    }
   }
 }
 /* ________ My material __________*/
+.up-arrow-blue{
+  position: relative;
+  text-decoration: none;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 65px;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid $grundfosBlue;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
+
 .my-material {
   width: 80%;
   .product-thumb {
     width: 22%;
+    cursor: pointer;
+    position: relative;
   }
   .generelProducts {
-    width: 100%;
+    width: 97%;
   }
   .product-thumb, .generelProducts{
-    margin: 1%;
+    margin: 1.2%;
     border: 1px solid $tableBorder;
     text-align: center;
     display: inline-block;
@@ -529,6 +568,34 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
   }
 }
 
+.productMaterial{
+  width: 97%;
+  height: auto;
+  margin: 1.2%;
+  position: relative;
+  border: 1px solid $complementary;
+  padding-bottom: 50px;
+  #table-header{
+    border: 0;
+  }
+  details{
+    border-left: 0;
+    border-right: 0;
+  }
+  .selectBox{
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+  .primaryAction{
+    bottom: 15px;
+    margin-right: 5px;
+  }
+}
+
+.newUpdates{
+  color: $notifikationRed;
+}
+
 /* ________ Inspiration __________*/
 .inspirationArticles {
   width: 80%;
@@ -540,10 +607,17 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
     margin: 1%;
     margin-bottom:2%;
     border: 1px solid $tableBorder;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
     section {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
     img {

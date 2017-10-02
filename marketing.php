@@ -69,9 +69,9 @@
 
     <main class="marketing-main">
       <article class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Marketing material')" id="defaultOpen">Marketing material</button>
-        <button class="tablinks" onclick="openTab(event, 'My material')">My material</button>
-        <button class="tablinks" onclick="openTab(event, 'Inspiration')">Inspiration</button>
+        <button class="tablinks" onclick="openTab(event, 'marketingMaterial')" id="defaultOpen">Marketing material</button>
+        <button class="tablinks" onclick="openTab(event, 'myMaterial')">My material</button>
+        <button class="tablinks" onclick="openTab(event, 'inspiration')">Inspiration</button>
       </article>
 
     <!-- include tab contents -->
