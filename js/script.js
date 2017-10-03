@@ -31,12 +31,12 @@ $("#filters input").prop("checked", true);
 
 //check input 'all' fra og til - 'inspiration'
 
-  $('#filter-all').on('change', function(){
-    $('.filterCategory').not('#filter-all').prop('checked', false);
+  $('.filter-all').on('change', function(){
+    $('.filterCategoryItem').not('.filter-all').prop('checked', false);
   });
 
-  $('.filterCategory').on('change', function(){
-    $('#filter-all').not('.filterCategory').prop('checked', false);
+  $('.filterCategoryItem').on('change', function(){
+    $('.filter-all').not('.filterCategoryItem').prop('checked', false);
   });
 
 

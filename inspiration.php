@@ -7,39 +7,39 @@
         <label for="filter-all">All</label>
       </li>
       <li>
-        <input type="checkbox" name="generel" value="generel" id="filter-generel" class="filterCategory">
+        <input type="checkbox" name="generel" value="generel" id="filter-generel" class="filterCategoryItem">
         <label for="filter-generel">Generel</label>
       </li>
       <li>
-        <input type="checkbox" name="campaigns" value="campaigns" id="filter-campaigns" class="filterCategory">
+        <input type="checkbox" name="campaigns" value="campaigns" id="filter-campaigns" class="filterCategoryItem">
         <label for="filter-campaigns">Campaigns</label>
       </li>
       <li>
-        <input type="checkbox" name="seasonal" value="seasonal" id="filter-seasonal" class="filterCategory">
+        <input type="checkbox" name="seasonal" value="seasonal" id="filter-seasonal" class="filterCategoryItem">
         <label for="filter-seasonal">Seasonal</label>
       </li>
       <li>
-        <input type="checkbox" name="productImages" value="productImages" id="filter-productImages" class="filterCategory">
+        <input type="checkbox" name="productImages" value="productImages" id="filter-productImages" class="filterCategoryItem">
         <label for="filter-productImages">Product Images</label>
       </li>
       <li>
-        <input type="checkbox" name="webbanners" value="webbanners" id="filter-webbanners" class="filterCategory">
+        <input type="checkbox" name="webbanners" value="webbanners" id="filter-webbanners" class="filterCategoryItem">
         <label for="filter-webbanners">Webbanners</label>
       </li>
       <li>
-        <input type="checkbox" name="videos" value="videos" id="filter-videos" class="filterCategory">
+        <input type="checkbox" name="videos" value="videos" id="filter-videos" class="filterCategoryItem">
         <label for="filter-videos">Videos</label>
       </li>
       <li>
-        <input type="checkbox" name="caseStories" value="caseStories" id="filter-caseStories" class="filterCategory">
+        <input type="checkbox" name="caseStories" value="caseStories" id="filter-caseStories" class="filterCategoryItem">
         <label for="filter-caseStories">Case Stories</label>
       </li>
       <li>
-        <input type="checkbox" name="usp" value="usp" id="filter-usp" class="filterCategory">
+        <input type="checkbox" name="usp" value="usp" id="filter-usp" class="filterCategoryItem">
         <label for="filter-usp">Unique Selling Points</label>
       </li>
       <li>
-        <input type="checkbox" name="publications" value="publications" id="filter-publications" class="filterCategory">
+        <input type="checkbox" name="publications" value="publications" id="filter-publications" class="filterCategoryItem">
         <label for="filter-publications">Publications</label>
       </li>
     </ul>
