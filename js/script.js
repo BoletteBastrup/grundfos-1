@@ -10,10 +10,24 @@ $('#advancedSearch').click(function() {
   $('#advancedSearchBox').toggleClass("show");
 });
 
-$('.product-thumb').click(function() {
+//Udvidet produktmateriale til ALPHA2
+$('.ALPHA2').click(function() {
   $('.productMaterial').toggleClass("show");
 });
 
+//Filter-funktion (source: http://jsfiddle.net/6wYzw/42/)
+$("#filters :checkbox").click(function(){
+  var re = new RegExp($("#filters :checkbox:checked").map(function(){
+    return this.value;
+  }).get().join("|"));
+  $(".product-thumb").each(function(){
+    var $this = $(this);
+    $this [re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
+  });
+});
+
+//Check all 'My material'
+$("#filters input").prop("checked", true);
 
 //TABS UNDER MARKETING MATERIAL
 function openTab(evt, tab) {

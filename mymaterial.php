@@ -3,76 +3,76 @@
   <form>
     <h3>My pump models</h3>
     <p class="newUpdates">New updates</p>
-    <ul>
+    <ul id="filters">
       <li>
-        <input type="checkbox">
-        <label for="productImages">ALPHA 2</label>
+        <input type="checkbox" value="ALPHA2" id="filter-ALPHA2">
+        <label for="filter-ALPHA2">ALPHA2</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">ALPHA 3</label>
+        <input type="checkbox" value="ALPHA3" id="filter-ALPHA3">
+        <label for="filter-ALPHA3">ALPHA3</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">CONLIFT</label>
+        <input type="checkbox" value="CONLIFT" id="filter-CONLIFT">
+        <label for="filter-CONLIFT">CONLIFT</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">CRN</label>
+        <input type="checkbox" value="CRN" id="filter-CRN">
+        <label for="filter-CRN">CRN</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">MAGNA</label>
+        <input type="checkbox" value="MAGNA" id="filter-MAGNA">
+        <label for="filter-MAGNA">MAGNA</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">SEG</label>
+        <input type="checkbox" value="SEG" id="filter-SEG">
+        <label for="filter-SEG">SEG</label>
       </li>
-      <li><input type="checkbox">
-        <label for="productImages">SPK</label>
-      </li>
-      <li>
-        <input type="checkbox">
-        <label for="productImages">SQU</label>
+      <li><input type="checkbox" value="SPK" id="filter-SPK">
+        <label for="filter-SPK">SPK</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">TP</label>
+        <input type="checkbox" value="SQE" id="filter-SQE">
+        <label for="filter-SQE">SQE</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">UNILIFT AP</label>
+        <input type="checkbox" value="TP" id="filter-TP">
+        <label for="filter-TP">TP</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">UNILIFT CC</label>
+        <input type="checkbox" value="UNILIFTAP" id="filter-UNILIFTAP">
+        <label for="filter-UNILIFTAP">UNILIFT AP</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">UNILIFT KP</label>
+        <input type="checkbox" value="UNILIFTCC" id="filter-UNILIFTCC">
+        <label for="filter-UNILIFTCC">UNILIFT CC</label>
       </li>
       <li>
-        <input type="checkbox">
-        <label for="productImages">UP</label>
+        <input type="checkbox" value="UNILIFTKP" id="filter-UNILIFTKP">
+        <label for="filter-UNILIFTKP">UNILIFT KP</label>
+      </li>
+      <li>
+        <input type="checkbox" value="UP" id="filter-UP">
+        <label for="filter-UP">UP</label>
       </li>
     </ul>
   </form>
 </aside>
   <section class="my-material">
-    <article class="product-thumb">
+    <article class="product-thumb ALPHA2">
       <div class="notifikation">2</div>
       <img src="img/products/alpha2.png" alt="Alpha 2">
-      <h3>ALPHA 2</h3>
+      <h3>ALPHA2</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb ALPHA3">
       <img src="img/products/alpha3.png" alt="Alpha 3">
-      <h3>ALPHA 3</h3>
+      <h3>ALPHA3</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb CMBE">
       <img src="img/products/cmbe.png" alt="cmbe">
       <h3>CMBE</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb CONLIFT">
       <img src="img/products/comfort.png" alt="Comfort">
       <h3>CONLIFT</h3>
     </article>
@@ -90,7 +90,7 @@
         </tr>
       </table>
       <details open>
-        <summary>Alpha 2</summary>
+        <summary>ALPHA2</summary>
         <details>
           <summary>Product Images</summary>
           <table>
@@ -225,45 +225,45 @@
         <button class="primaryAction">Download Selected</button>
       </section>
     </section>
-    <article class="product-thumb">
+    <article class="product-thumb CRN">
       <img src="img/products/crn.png" alt="Crn">
       <h3>CRN</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb MAGNA">
       <img src="img/products/Magna3.png" alt="Magna 3">
       <h3>MAGNA</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb SEG">
       <img src="img/products/seg.png" alt="Seg">
       <h3>SEG</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb SPK">
       <img src="img/products/spk.png" alt="spk">
       <h3>SPK</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb SQE">
       <img src="img/products/sqe.png" alt="Sqe">
       <h3>SQE</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb TP">
       <img src="img/products/tp.png" alt="tp">
       <h3>TP</h3>
     </article>
-    <article class="product-thumb">
-      <img src="img/products/unilift-cc.png" alt="Unilift CC">
+    <article class="product-thumb UNILIFTAP">
+      <img src="img/products/unilift-ap.png" alt="Unilift AP">
       <h3>UNILIFT AP</h3>
     </article>
-    <article class="product-thumb">
-      <img src="img/products/unilift-ap.png" alt="Unilift AP">
+    <article class="product-thumb UNILIFTCC">
+      <img src="img/products/unilift-cc.png" alt="Unilift CC">
       <h3>UNILIFT CC</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb UNILIFTKP">
       <img src="img/products/unilift-kp.png" alt="Unilift KP">
       <h3>UNILIFT KP</h3>
     </article>
-    <article class="product-thumb">
+    <article class="product-thumb UP">
       <img src="img/products/up.png" alt="UP">
-      <h3>Up</h3>
+      <h3>UP</h3>
     </article>
     <article class="generelProducts">
       <img src="img/grundfos-logo-blue.jpg" alt="Generel Marketing Material">
