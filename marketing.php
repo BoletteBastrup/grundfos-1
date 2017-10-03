@@ -139,7 +139,6 @@
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
-  <!--<script src="js/table-animationer.js" charset="utf-8"></script>-->
 </body>
 
 </html>
