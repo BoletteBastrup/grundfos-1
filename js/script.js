@@ -1,7 +1,7 @@
 function submitPump() {
   var input = document.getElementsByClassName("tt-input")[0];
   var pump = input.value;
-  if (input.value === "Alpha 2") {
+  if (input.value === "ALPHA2") {
     document.getElementById("searchResult").style.display = "block";
   }
 };
