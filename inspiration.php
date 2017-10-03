@@ -59,6 +59,7 @@
           <button class="primaryAction">Find brochure</button>
         </article>
       </section>
+      <div class="gradientBox"></div>
       <button class="secondaryAction seeMore">Read more</button>
     </section>
     <div class="notifikation">1</div>
@@ -73,13 +74,11 @@
           <p class="date">21/09/17</p>
           <p>The classic ALPHA2 pump is still very popular among the installers. We have updated our material and made it more modern for you to use.</p>
           <p>In the new marketing material you will find two updated webbanners, new product image both for web and print together with an updated list of Unique Selling Points (USP).</p>
-          <img src="img/ALPHA2_application_image_1200x800px.jpg" alt="ALPHA2 application">
-          <img src="img/ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg" alt="ALPHA2 webbanner">
-          <img src="img/ALPHA2_circulator_webbanner_728x90px_ENGLISH.jpg" alt="ALPHA2 webbanner">
-          <img src="img/ALPHA2_product_image_1200x1200px.jpg" alt="ALPHA2 pump">
+          <img src="img/newOnlineMaterialToALPHA2.png" alt="ALPHA2 material" id="ALPHA2MaterialImg">
           <button class="primaryAction">Find material</button>
         </article>
       </section>
+      <div class="gradientBox"></div>
       <button class="secondaryAction seeMore">Read more</button>
     </section>
     <div class="notifikation">1</div>
@@ -94,12 +93,14 @@
       <p class="date">18/09/17</p>
       <p>Our roll up banner can be used at many different occasions. A roll up banner means that you can take the professional presence with you – wherever your business may require you to go.</p>
       <p>The rollup banners are quite often regarded as the display screens which demonstrate significant information regarding your company’s products and services. If you wish to create a niche for yourself and create an impression in the mind of target customers then this is a wonderful tool that you can use.</p>
-      <p>Use our roll up banners for your store, your promotion events or any other occassion where you might find it useful</p>
-      <img src="img/rollUpExhibition.jpg" alt="Grundfos roll up banner exhibition">
+      <p>Use our roll up banners for your store, your promotion events or any other occassion where you might find it useful.</p>
+      <img src="img/rollUpExhibition.jpg" alt="Grundfos roll up banner exhibition" id="rollUpImg">
       </article>
     </section>
+    <div class="gradientBox"></div>
     <button class="secondaryAction seeMore">Read more</button>
   </section>
+  <div></div>
 </section>
 </section>
 

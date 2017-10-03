@@ -497,7 +497,7 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
   width: 20%;
   background-color: $advancedSearch;
   border: 1px solid $tableBorder;
-  margin: .8%;
+  margin: 1.5% .8%;
   height: 100%;
   padding: 1em 0.5em;
   h3 {
@@ -539,6 +539,7 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
 
 .my-material {
   width: 80%;
+  margin-top: .4em;
   .product-thumb {
     width: 22%;
     cursor: pointer;
@@ -598,6 +599,7 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
 /* ________ Inspiration __________*/
 .inspirationArticles {
   width: 80%;
+  margin-top:.5em;
   .articleBox {
     position: relative;
   }
@@ -614,6 +616,12 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
         -ms-flex-direction: column;
             flex-direction: column;
     position: relative;
+    .inspHeadline {
+      padding-top:1em;
+    }
+    .date {
+      color:$tableBorder;
+    }
     section {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -624,9 +632,23 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
       height: 150px;
       padding: 1em;
     }
+    p {
+      padding-right: 2em;
+      line-height: 1.4em;
+    }
+    #ALPHA2MaterialImg {
+      width: 100%;
+      height: auto;
+      padding: 2em 0 4em 0;
+    }
+    #rollUpImg {
+      width: 100%;
+      height: auto;
+      padding: 2em 2em 5em 0;
+    }
   }
   .more {
-  height: 170px;
+  height: 160px;
   overflow: hidden;
 }
   .seeMore {
@@ -640,5 +662,14 @@ main.marketing-main .myMaterial, main.marketing-main .inspiration {
     float:right;
     margin-right: 143px;
     bottom: 6px;
+    margin-top: 3em;
   }
+}
+.gradientBox {
+  height: 260px;
+  background: -webkit-linear-gradient(transparent, white);
+  background: -o-linear-gradient(transparent, white);
+  background: linear-gradient(transparent, white);
+  margin-bottom: -1px;
+  border-bottom: 1px solid #c9c9c9;
 }

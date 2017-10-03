@@ -90,14 +90,17 @@ new Vue({
 }
 });
 
+//Udvid box i 'Inspiration'
 $(".seeMore").click(function(){
   var val = $(this).text();
 if (val == "Read more") {
-  $(this).parent().css('height', 'auto');
+  $(this).parent().css('height','auto');
   $(this).text("Read less");
+  $(this).siblings('.gradientBox').css('display','none');
 } else {
-  $(this).parent().css('height', '170px');
+  $(this).parent().animate({height:"160px"});
   $(this).text("Read more");
+  $(this).siblings('.gradientBox').css('display','block');
 }
   return false;
   });
