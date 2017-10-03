@@ -3,7 +3,7 @@
   <form>
     <h3>My pump models</h3>
     <p class="newUpdates">New updates</p>
-    <ul id="filters">
+    <ul id="filters" class="filters">
       <li>
         <input type="checkbox" value="ALPHA2" id="filter-ALPHA2">
         <label for="filter-ALPHA2">ALPHA2</label>
@@ -59,20 +59,20 @@
   </form>
 </aside>
   <section class="my-material">
-    <article class="product-thumb ALPHA2">
+    <article class="filterItem product-thumb ALPHA2">
       <div class="notifikation">2</div>
       <img src="img/products/alpha2.png" alt="Alpha 2">
       <h3>ALPHA2</h3>
     </article>
-    <article class="product-thumb ALPHA3">
+    <article class="filterItem product-thumb ALPHA3">
       <img src="img/products/alpha3.png" alt="Alpha 3">
       <h3>ALPHA3</h3>
     </article>
-    <article class="product-thumb CMBE">
+    <article class="filterItem product-thumb CMBE">
       <img src="img/products/cmbe.png" alt="cmbe">
       <h3>CMBE</h3>
     </article>
-    <article class="product-thumb CONLIFT">
+    <article class="filterItem product-thumb CONLIFT">
       <img src="img/products/comfort.png" alt="Comfort">
       <h3>CONLIFT</h3>
     </article>
@@ -225,43 +225,43 @@
         <button class="primaryAction">Download Selected</button>
       </section>
     </section>
-    <article class="product-thumb CRN">
+    <article class="filterItem product-thumb CRN">
       <img src="img/products/crn.png" alt="Crn">
       <h3>CRN</h3>
     </article>
-    <article class="product-thumb MAGNA">
+    <article class="filterItem product-thumb MAGNA">
       <img src="img/products/Magna3.png" alt="Magna 3">
       <h3>MAGNA</h3>
     </article>
-    <article class="product-thumb SEG">
+    <article class="filterItem product-thumb SEG">
       <img src="img/products/seg.png" alt="Seg">
       <h3>SEG</h3>
     </article>
-    <article class="product-thumb SPK">
+    <article class="filterItem product-thumb SPK">
       <img src="img/products/spk.png" alt="spk">
       <h3>SPK</h3>
     </article>
-    <article class="product-thumb SQE">
+    <article class="filterItem product-thumb SQE">
       <img src="img/products/sqe.png" alt="Sqe">
       <h3>SQE</h3>
     </article>
-    <article class="product-thumb TP">
+    <article class="filterItem product-thumb TP">
       <img src="img/products/tp.png" alt="tp">
       <h3>TP</h3>
     </article>
-    <article class="product-thumb UNILIFTAP">
+    <article class="filterItem product-thumb UNILIFTAP">
       <img src="img/products/unilift-ap.png" alt="Unilift AP">
       <h3>UNILIFT AP</h3>
     </article>
-    <article class="product-thumb UNILIFTCC">
+    <article class="filterItem product-thumb UNILIFTCC">
       <img src="img/products/unilift-cc.png" alt="Unilift CC">
       <h3>UNILIFT CC</h3>
     </article>
-    <article class="product-thumb UNILIFTKP">
+    <article class="filterItem product-thumb UNILIFTKP">
       <img src="img/products/unilift-kp.png" alt="Unilift KP">
       <h3>UNILIFT KP</h3>
     </article>
-    <article class="product-thumb UP">
+    <article class="filterItem product-thumb UP">
       <img src="img/products/up.png" alt="UP">
       <h3>UP</h3>
     </article>

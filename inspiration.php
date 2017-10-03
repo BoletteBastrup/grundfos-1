@@ -1,48 +1,52 @@
 <article id="inspiration" class="tabcontent inspiration">
   <aside class="filterCategory">
     <h3>Sort by category</h3>
-    <ul>
+    <ul class="filters">
       <li>
-        <input type="checkbox" name="generel">
-        <label for="productImages">Generel</label>
+        <input type="checkbox" name="all" value="all" id="filter-all" class="filter-all" checked="true">
+        <label for="filter-all">All</label>
       </li>
       <li>
-        <input type="checkbox" name="campaigns">
-        <label for="productImages">Campaigns</label>
+        <input type="checkbox" name="generel" value="generel" id="filter-generel" class="filterCategory">
+        <label for="filter-generel">Generel</label>
       </li>
       <li>
-        <input type="checkbox" name="seasonal">
-        <label for="productImages">Seasonal</label>
+        <input type="checkbox" name="campaigns" value="campaigns" id="filter-campaigns" class="filterCategory">
+        <label for="filter-campaigns">Campaigns</label>
       </li>
       <li>
-        <input type="checkbox" name="productImages">
-        <label for="productImages">Product Images</label>
+        <input type="checkbox" name="seasonal" value="seasonal" id="filter-seasonal" class="filterCategory">
+        <label for="filter-seasonal">Seasonal</label>
       </li>
       <li>
-        <input type="checkbox" name="webbanners">
-        <label for="productImages">Webbanners</label>
+        <input type="checkbox" name="productImages" value="productImages" id="filter-productImages" class="filterCategory">
+        <label for="filter-productImages">Product Images</label>
       </li>
       <li>
-        <input type="checkbox" name="videos">
-        <label for="productImages">Videos</label>
+        <input type="checkbox" name="webbanners" value="webbanners" id="filter-webbanners" class="filterCategory">
+        <label for="filter-webbanners">Webbanners</label>
       </li>
       <li>
-        <input type="checkbox" name="caseStories">
-        <label for="productImages">Case Stories</label>
+        <input type="checkbox" name="videos" value="videos" id="filter-videos" class="filterCategory">
+        <label for="filter-videos">Videos</label>
       </li>
       <li>
-        <input type="checkbox" name="usp">
-        <label for="productImages">Unique Selling Points</label>
+        <input type="checkbox" name="caseStories" value="caseStories" id="filter-caseStories" class="filterCategory">
+        <label for="filter-caseStories">Case Stories</label>
       </li>
       <li>
-        <input type="checkbox" name="publications">
-        <label for="productImages">Publications</label>
+        <input type="checkbox" name="usp" value="usp" id="filter-usp" class="filterCategory">
+        <label for="filter-usp">Unique Selling Points</label>
+      </li>
+      <li>
+        <input type="checkbox" name="publications" value="publications" id="filter-publications" class="filterCategory">
+        <label for="filter-publications">Publications</label>
       </li>
     </ul>
   </aside>
 
 <section class="inspirationArticles">
-  <section class="articleBox">
+  <section class="filterItem articleBox generel campaigns seasonal all">
     <section class="inspArticle more">
       <section>
         <img src="img/grundfosWaterUtilityRangeBrochure.jpg" alt="Grundfos Water Utility Range Brochure">
@@ -60,7 +64,7 @@
     <div class="notifikation">1</div>
   </section>
 
-  <section class="articleBox">
+  <section class="filterItem articleBox productImages webbanners usp all">
     <section class="inspArticle more">
       <section>
         <img src="img/ALPHA2.jpg" alt="ALPHA 2 Pump">
@@ -81,6 +85,7 @@
     <div class="notifikation">1</div>
   </section>
 
+<section class="filterItem articleBox generel all">
   <section class="inspArticle more">
     <section>
       <img src="img/rollUp.jpeg" alt="">
@@ -95,6 +100,7 @@
     </section>
     <button class="secondaryAction seeMore">Read more</button>
   </section>
+</section>
 </section>
 
 </article>

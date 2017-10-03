@@ -16,11 +16,11 @@ $('.ALPHA2').click(function() {
 });
 
 //Filter-funktion (source: http://jsfiddle.net/6wYzw/42/)
-$("#filters :checkbox").click(function(){
-  var re = new RegExp($("#filters :checkbox:checked").map(function(){
+$(".filters :checkbox").click(function(){
+  var re = new RegExp($(".filters :checkbox:checked").map(function(){
     return this.value;
   }).get().join("|"));
-  $(".product-thumb").each(function(){
+  $(".filterItem").each(function(){
     var $this = $(this);
     $this [re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
   });
@@ -28,6 +28,17 @@ $("#filters :checkbox").click(function(){
 
 //Check all 'My material'
 $("#filters input").prop("checked", true);
+
+//check input 'all' fra og til - 'inspiration'
+
+  $('#filter-all').on('change', function(){
+    $('.filterCategory').not('#filter-all').prop('checked', false);
+  });
+
+  $('.filterCategory').on('change', function(){
+    $('#filter-all').not('.filterCategory').prop('checked', false);
+  });
+
 
 //TABS UNDER MARKETING MATERIAL
 function openTab(evt, tab) {
