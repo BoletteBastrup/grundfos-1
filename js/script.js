@@ -93,11 +93,12 @@ new Vue({
 //Udvid box i 'Inspiration'
 $(".seeMore").click(function(){
   var val = $(this).text();
-if (val == "Read more") {
-  $(this).parent().css('height','auto');
+  if (val == "Read more") {
+  $(this).parent().animate({maxHeight: '60000px'});
   $(this).text("Read less");
   $(this).siblings('.gradientBox').css('display','none');
 } else {
+  $('.more').removeClass('animated');
   $(this).parent().animate({height:"160px"});
   $(this).text("Read more");
   $(this).siblings('.gradientBox').css('display','block');
