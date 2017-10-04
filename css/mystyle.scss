@@ -142,6 +142,7 @@ main.marketing-main{
         float: left;
         border: none;
         outline: none;
+        height: 48px;
         border: 1px solid #ccc;
         margin-right: -1px;
         text-transform: uppercase;
@@ -162,6 +163,7 @@ main.marketing-main{
           color: white;
           height: 18px;
           width: 18px;
+          font-weight: 300;
           font-size: 10px;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -524,6 +526,10 @@ table{
 }
 
 /* ----------------------------------------- My material og Inpiration ---------------------------------------*/
+
+.tabRedirect {
+  align-self: center;
+}
 
 main.marketing-main .myMaterial, main.marketing-main .inspiration {
   -webkit-box-orient: horizontal;
