@@ -8,6 +8,7 @@ function submitPump() {
 
 $('#advancedSearch').click(function() {
   $('#advancedSearchBox').toggleClass("show");
+  $('#shuit').toggleClass("show");
 });
 
 //Display block på advancedSearchBox når webbanners & uniqueSellingPoints er
@@ -152,14 +153,18 @@ new Vue({
 $(".seeMore").click(function(){
   var val = $(this).text();
   if (val == "Read more") {
-  $(this).parent().animate({maxHeight: '60000px'});
-  $(this).text("Read less");
-  $(this).siblings('.gradientBox').css('display','none');
+  //Da height="auto" ikke kan animeres, bruger vi 1000px for at være sikre på at alt bliver vist
+  $(this).parent().animate({height:"1000px"});
+  //Derefter får hver artikel en maks højde som ville svare til height="auto"
+  $('.brochure').css({maxHeight:"333px"});
+  $('.articleProduct').css({maxHeight:"502px"});
+  $('.rollUps').css({maxHeight:"650px"});
+  $(this).text("Read less"); //ændre knappen til read less
+  $(this).siblings('.gradientBox').css('display','none'); //fjerner gradient fra bunden når artiklen udvides
 } else {
-  $('.more').removeClass('animated');
-  $(this).parent().animate({height:"160px"});
-  $(this).text("Read more");
-  $(this).siblings('.gradientBox').css('display','block');
+  $(this).parent().animate({height:"160px"}); //animere højden tilbage til udsnittet
+  $(this).text("Read more"); //ændre knappen til read more
+  $(this).siblings('.gradientBox').css('display','block'); //tilføjer gradient til bunden igen
 }
   return false;
   });

@@ -66,7 +66,7 @@
   </section>
 
   <section class="filterItem articleBox productImages webbanners usp all">
-    <section class="inspArticle more">
+    <section class="inspArticle more articleProduct">
       <section>
         <img src="img/ALPHA2.jpg" alt="ALPHA 2 Pump">
         <article>
@@ -85,7 +85,7 @@
   </section>
 
 <section class="filterItem articleBox generel all">
-  <section class="inspArticle more">
+  <section class="inspArticle more rollUps">
     <section>
       <img src="img/rollUp.jpeg" alt="">
       <article>

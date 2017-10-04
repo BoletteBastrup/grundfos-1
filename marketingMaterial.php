@@ -5,11 +5,11 @@
     <button type="button" id="submit" onclick="submitPump()" class="iconButton" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
     <button type="button" id="advancedSearch" name="button">Advanced Search</button>
   </section>
-  <section class="show displayNone">
+  <section class="show" id="shuit">
     <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
     <label for="mymaterialsonly">Search by 'My material' only</label>
   </section>
-  <section id="advancedSearchBox" class="displayNone up-arrow">
+  <section id="advancedSearchBox" class="up-arrow">
 
     <div id="advancedSearchFlex">
       <section id="productResult">
