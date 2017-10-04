@@ -111,31 +111,7 @@
   <script src="js/bloodhound.min.js" charset="utf-8"></script>
   <script src="js/typeahead.bundle.min.js" charset="utf-8"></script>
   <script src="js/typeahead.jquery.min.js" charset="utf-8"></script>
-  <script type="text/javascript">
-    var pumps = new Bloodhound({
-      datumTokenizer: Bloodhound.tokenizers.whitespace,
-      queryTokenizer: Bloodhound.tokenizers.whitespace,
-      // url points to a json file that contains an array of country names, see
-      // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
-      prefetch: 'data.json'
-      });
-
-      // passing in `null` for the `options` arguments will result in the default
-      // options being used
-      $('.prefetch .typeahead').typeahead(null, {
-      name: 'pumps',
-      source: pumps
-    });
-
-    function toggle(source) {
-    var checkboxes = document.querySelectorAll('input[class="checked"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] != source)
-            checkboxes[i].checked = source.checked;
-    }};
-
-
-  </script>
+  <script src="js/typeahead-implementation.js" charset="utf-8"></script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
