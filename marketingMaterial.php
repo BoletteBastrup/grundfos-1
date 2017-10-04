@@ -45,7 +45,7 @@
             <label for="productImages">Product Images</label>
           </li>
           <li>
-            <input type="checkbox" name="webbanners">
+            <input type="checkbox" id="webBanners" name="webbanners">
             <label for="webbanners">Webbanners</label>
           </li>
           <li>
@@ -57,7 +57,7 @@
             <label for="caseStories">Case Stories</label>
           </li>
           <li>
-            <input type="checkbox" name="uniqueSellingPoints">
+            <input type="checkbox" id="uspCheck" name="uniqueSellingPoints">
             <label for="uniqueSellingPoints">Unique Selling Points</label>
           </li>
           <li>
@@ -206,6 +206,114 @@
             <td class="td-checkbox"><input type="checkbox" class="checked"></td>
             <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/ALPHA2/UniqueSellingPoints/ALPHA2_USPs.jpg" alt=""></span></i></a></td>
             <td class="td-name">ALPHA2_UPSs</td>
+            <td class="td-type"></td>
+            <td class="td-file">.docx</td>
+            <td class="td-size">22</td>
+            <td class="td-unit">kb</td>
+            <td class="td-update">26/08/15</td>
+          </tr>
+        </table>
+      </details>
+    </details>
+    <section class="download">
+      <article class="selectBox">
+        <input type="checkbox" onclick="toggle(this);">
+        <label for="">Select All</label>
+      </article>
+      <button class="primaryAction">Download Selected</button>
+    </section>
+  </section>
+  <section id="advancedSearchResult" style="display: none;">
+    <p>Results</p>
+    <table id="table-header">
+      <tr>
+        <td class="td-checkbox"></td>
+        <td class="showImage"></td>
+        <td class="td-name">Title</td>
+        <td class="td-type"></td>
+        <td class="td-file">File</td>
+        <td class="td-size">Size</td>
+        <td class="td-unit"></td>
+        <td class="td-update">Update</td>
+      </tr>
+    </table>
+    <details open>
+      <summary>Alpha 2</summary>
+      <details open>
+        <summary>Webbanners</summary>
+        <table>
+          <tr>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
+            <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/ALPHA2/Webbanners/ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg" alt="ALPHA 2 webbanner"></span></i></a></td>
+            <td class="td-name">ALPHA2_circulator_webbanner_300x250px_ENGLISH</td>
+            <td class="td-type"></td>
+            <td class="td-file">.jpg</td>
+            <td class="td-size">39</td>
+            <td class="td-unit">kb</td>
+            <td class="td-update">21/04/16</td>
+          </tr>
+          <tr>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
+            <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/ALPHA2/Webbanners/ALPHA2_circulator_webbanner_728x90px_ENGLISH.jpg" alt=""></span></i></a></td>
+            <td class="td-name">ALPHA2_circulator_webbanner_728x90px_ENGLISH</td>
+            <td class="td-type"></td>
+            <td class="td-file">.jpg</td>
+            <td class="td-size">38</td>
+            <td class="td-unit">kb</td>
+            <td class="td-update">29/03/17</td>
+          </tr>
+        </table>
+      </details>
+      <details open>
+        <summary>Unique Selling Points (USP)</summary>
+        <table>
+          <tr>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
+            <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/ALPHA2/UniqueSellingPoints/ALPHA2_USPs.jpg" alt=""></span></i></a></td>
+            <td class="td-name">ALPHA2_UPSs</td>
+            <td class="td-type"></td>
+            <td class="td-file">.docx</td>
+            <td class="td-size">22</td>
+            <td class="td-unit">kb</td>
+            <td class="td-update">26/08/15</td>
+          </tr>
+        </table>
+      </details>
+    </details>
+    <details open>
+      <summary>MAGNA</summary>
+      <details open>
+        <summary>Webbanners</summary>
+        <table>
+          <tr>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
+            <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/ALPHA2/Webbanners/ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg" alt="ALPHA 2 webbanner"></span></i></a></td>
+            <td class="td-name">MAGNA_circulator_webbanner_300x250px_ENGLISH</td>
+            <td class="td-type"></td>
+            <td class="td-file">.jpg</td>
+            <td class="td-size">39</td>
+            <td class="td-unit">kb</td>
+            <td class="td-update">21/04/16</td>
+          </tr>
+          <tr>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
+            <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/ALPHA2/Webbanners/ALPHA2_circulator_webbanner_728x90px_ENGLISH.jpg" alt=""></span></i></a></td>
+            <td class="td-name">MAGNA_circulator_webbanner_728x90px_ENGLISH</td>
+            <td class="td-type"></td>
+            <td class="td-file">.jpg</td>
+            <td class="td-size">38</td>
+            <td class="td-unit">kb</td>
+            <td class="td-update">29/03/17</td>
+          </tr>
+        </table>
+      </details>
+      <details open>
+        <summary>Unique Selling Points (USP)</summary>
+        <table>
+          <tr>
+            <td class="td-checkbox"><input type="checkbox" class="checked"></td>
+            <td class="showImage"><a href=""><i class="fa fa-eye" aria-hidden="true"><span><img src="img/ALPHA2/UniqueSellingPoints/ALPHA2_USPs.jpg" alt=""></span></i></a></td>
+            <td class="td-name">MAGNA_UPSs</td>
             <td class="td-type"></td>
             <td class="td-file">.docx</td>
             <td class="td-size">22</td>

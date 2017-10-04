@@ -10,6 +10,50 @@ $('#advancedSearch').click(function() {
   $('#advancedSearchBox').toggleClass("show");
 });
 
+//Display block på advancedSearchBox når webbanners & uniqueSellingPoints er
+//checked samt der er præcis to produkter tilføjet
+var webBanners = $('#webBanners'); //Variabler
+var uniqueSellingPoints = $('#uspCheck'); //Variabler
+var result = $('#advancedSearchResult'); //Variabler
+var search = $('#advancedSearchBox button'); //Variabler
+$(search).click(function() { //Ved klik på Search knappen
+  if ($(webBanners).is(':checked') && ($(uniqueSellingPoints).is(':checked')) && ($('.productList li').length === 2)) {
+    $(result).css('display', 'block'); //Tilføj display block
+  }
+  else {
+    alert('Felterne er ikke udfyldt korrekt');
+  }
+});
+
+$(document).ready(function (){
+    if (location.hash === '#myMaterialTab') { //Hvis URL slutter på #myMaterialTab
+      $('.marketingMaterialTab').removeClass('active'); //Fjern active class fra første tab
+      $('#marketingMaterialTab').removeAttr('defaultOpen'); //Fjern defaultOpen id fra første tab
+      $('.myMaterialTab').addClass('active'); //Tilføj active class til anden tab (myMaterials)
+
+      $('#marketingMaterial').css('display', 'none'); //Ændre display til none på indholdet af første tab
+      $('#myMaterial').css('display', 'flex'); //Ændre display til flex på indholdet af anden tab
+
+    } else if (location.hash === '#inspirationTop') { //Hvis URL slutter på #inspiration
+      $('.marketingMaterialTab').removeClass('active'); //Same story
+      $('#marketingMaterialTab').removeAttr('defaultOpen');
+      $('.inspirationTab').addClass('active');
+
+      $('#marketingMaterial').css('display', 'none');
+      $('#inspiration').css('display', 'flex');
+
+    } else if (location.hash === '#inspirationBrochure') {
+      $('.marketingMaterialTab').removeClass('active');
+      $('#marketingMaterialTab').removeAttr('defaultOpen');
+      $('.inspirationTab').addClass('active');
+
+      $('#marketingMaterial').css('display', 'none');
+      $('#inspiration').css('display', 'flex');
+
+      $('.brochure').css('height', 'auto'); //Udvid artiklen
+    }
+});
+
 //Udvidet produktmateriale til ALPHA2
 $('.ALPHA2').click(function() {
   $('.productMaterial').toggleClass("show");

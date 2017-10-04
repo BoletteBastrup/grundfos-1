@@ -47,7 +47,7 @@
 
 <section class="inspirationArticles">
   <section class="filterItem articleBox generel campaigns seasonal all">
-    <section class="inspArticle more">
+    <section class="inspArticle more brochure">
       <section>
         <img src="img/grundfosWaterUtilityRangeBrochure.jpg" alt="Grundfos Water Utility Range Brochure">
         <article>
