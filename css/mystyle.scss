@@ -115,6 +115,7 @@ button, input {
   width: 40px;
   border: none;
   margin-left: -1px;
+  height:41px;
   &:hover {
     color: white;
     cursor: pointer;
@@ -152,6 +153,28 @@ main.marketing-main{
         background-color: #e4e4e4;
         color: #727272;
         font-weight: bold;
+        display:flex;
+        &:first-child {
+          padding-bottom: 1.3em;
+        }
+        .h4-notifikation {
+          background-color: $notifikationRed;
+          color: white;
+          height: 18px;
+          width: 18px;
+          font-size: 10px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          border-radius: 50%;
+          margin-left: 10px;
+        }
       }
   }
   article.tab button:hover {
@@ -221,6 +244,7 @@ main.marketing-main{
       	display: -webkit-box;
       	display: -ms-flexbox;
       	display: flex;
+        margin-bottom:1em;
       }
       ul {
         width: 100%;
@@ -285,6 +309,7 @@ section.up-arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom:1em;
   span.twitter-typeahead {
     width: 50%;
     .tt-menu {

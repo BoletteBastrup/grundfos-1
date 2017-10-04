@@ -20,9 +20,9 @@
           <button @click="addProduct" class="iconButton"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
 
-        <section>
+        <section class="prefetch">
           <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
-          <label for="mymaterialsonly">Search by 'My material' only</label>
+          <label for="mymaterialsonly"> Search by 'My material' only</label>
         </section>
 
         <section>

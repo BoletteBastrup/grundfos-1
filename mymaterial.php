@@ -13,6 +13,10 @@
         <label for="filter-ALPHA3">ALPHA3</label>
       </li>
       <li>
+        <input type="checkbox" value="CMBE" id="filter-CMBE">
+        <label for="filter-CMBE">CMBE</label>
+      </li>
+      <li>
         <input type="checkbox" value="CONLIFT" id="filter-CONLIFT">
         <label for="filter-CONLIFT">CONLIFT</label>
       </li>
@@ -75,6 +79,50 @@
     <article class="filterItem product-thumb CONLIFT">
       <img src="img/products/comfort.png" alt="Comfort">
       <h3>CONLIFT</h3>
+    </article>
+    <article class="filterItem product-thumb CRN">
+      <img src="img/products/crn.png" alt="Crn">
+      <h3>CRN</h3>
+    </article>
+    <article class="filterItem product-thumb MAGNA">
+      <img src="img/products/Magna3.png" alt="Magna 3">
+      <h3>MAGNA</h3>
+    </article>
+    <article class="filterItem product-thumb SEG">
+      <img src="img/products/seg.png" alt="Seg">
+      <h3>SEG</h3>
+    </article>
+    <article class="filterItem product-thumb SPK">
+      <img src="img/products/spk.png" alt="spk">
+      <h3>SPK</h3>
+    </article>
+    <article class="filterItem product-thumb SQE">
+      <img src="img/products/sqe.png" alt="Sqe">
+      <h3>SQE</h3>
+    </article>
+    <article class="filterItem product-thumb TP">
+      <img src="img/products/tp.png" alt="tp">
+      <h3>TP</h3>
+    </article>
+    <article class="filterItem product-thumb UNILIFTAP">
+      <img src="img/products/unilift-ap.png" alt="Unilift AP">
+      <h3>UNILIFT AP</h3>
+    </article>
+    <article class="filterItem product-thumb UNILIFTCC">
+      <img src="img/products/unilift-cc.png" alt="Unilift CC">
+      <h3>UNILIFT CC</h3>
+    </article>
+    <article class="filterItem product-thumb UNILIFTKP">
+      <img src="img/products/unilift-kp.png" alt="Unilift KP">
+      <h3>UNILIFT KP</h3>
+    </article>
+    <article class="filterItem product-thumb UP">
+      <img src="img/products/up.png" alt="UP">
+      <h3>UP</h3>
+    </article>
+    <article class="generelProducts">
+      <img src="img/grundfos-logo-blue.jpg" alt="Generel Marketing Material">
+      <h3>GENERL MARKETING MATERIAL</h3>
     </article>
     <section class="productMaterial displayNone up-arrow-blue">
       <table id="table-header">
@@ -225,49 +273,5 @@
         <button class="primaryAction">Download Selected</button>
       </section>
     </section>
-    <article class="filterItem product-thumb CRN">
-      <img src="img/products/crn.png" alt="Crn">
-      <h3>CRN</h3>
-    </article>
-    <article class="filterItem product-thumb MAGNA">
-      <img src="img/products/Magna3.png" alt="Magna 3">
-      <h3>MAGNA</h3>
-    </article>
-    <article class="filterItem product-thumb SEG">
-      <img src="img/products/seg.png" alt="Seg">
-      <h3>SEG</h3>
-    </article>
-    <article class="filterItem product-thumb SPK">
-      <img src="img/products/spk.png" alt="spk">
-      <h3>SPK</h3>
-    </article>
-    <article class="filterItem product-thumb SQE">
-      <img src="img/products/sqe.png" alt="Sqe">
-      <h3>SQE</h3>
-    </article>
-    <article class="filterItem product-thumb TP">
-      <img src="img/products/tp.png" alt="tp">
-      <h3>TP</h3>
-    </article>
-    <article class="filterItem product-thumb UNILIFTAP">
-      <img src="img/products/unilift-ap.png" alt="Unilift AP">
-      <h3>UNILIFT AP</h3>
-    </article>
-    <article class="filterItem product-thumb UNILIFTCC">
-      <img src="img/products/unilift-cc.png" alt="Unilift CC">
-      <h3>UNILIFT CC</h3>
-    </article>
-    <article class="filterItem product-thumb UNILIFTKP">
-      <img src="img/products/unilift-kp.png" alt="Unilift KP">
-      <h3>UNILIFT KP</h3>
-    </article>
-    <article class="filterItem product-thumb UP">
-      <img src="img/products/up.png" alt="UP">
-      <h3>UP</h3>
-    </article>
-    <article class="generelProducts">
-      <img src="img/grundfos-logo-blue.jpg" alt="Generel Marketing Material">
-      <h3>GENERL MARKETING MATERIAL</h3>
-    </article>
   </section>
 </article>

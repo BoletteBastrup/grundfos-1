@@ -15,6 +15,19 @@ $('.ALPHA2').click(function() {
   $('.productMaterial').toggleClass("show");
 });
 
+
+//Indsætter .productMaterial efter 4 article-enheder
+$( ".productMaterial" ).insertAfter( $( '.my-material article:eq(3)') );
+
+//Forsøg på at sørge for at .productMaterial altid kom efter de 4 første enheder - kunne ikke få DOM-manipulationen til at virke
+/*var x;
+$('#filter-ALPHA3').change(function(){
+if (!this.checked)
+x = $('.ALPHA3').detach();
+else
+$('.my-material').append(x);
+});*/
+
 //Filter-funktion (source: http://jsfiddle.net/6wYzw/42/)
 $(".filters :checkbox").click(function(){
   var re = new RegExp($(".filters :checkbox:checked").map(function(){
@@ -23,6 +36,7 @@ $(".filters :checkbox").click(function(){
   $(".filterItem").each(function(){
     var $this = $(this);
     $this [re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
+
   });
 });
 

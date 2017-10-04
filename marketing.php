@@ -62,7 +62,7 @@
           <li>Orderstatus</li>
           <li>List price finder</li>
           <li>Availability</li>
-          <li class="active">Marketing material</li>
+          <li class="active">Marketing material<span class="h4-notifikation">4</span></li>
         </ul>
       </nav>
     </aside>
@@ -70,8 +70,8 @@
     <main class="marketing-main">
       <article class="tab">
         <button class="tablinks" onclick="openTab(event, 'marketingMaterial')" id="defaultOpen">Marketing material</button>
-        <button class="tablinks" onclick="openTab(event, 'myMaterial')">My material</button>
-        <button class="tablinks" onclick="openTab(event, 'inspiration')">Inspiration</button>
+        <button class="tablinks" onclick="openTab(event, 'myMaterial')">My material<span class="h4-notifikation">2</span></button>
+        <button class="tablinks" onclick="openTab(event, 'inspiration')">Inspiration<span class="h4-notifikation">2</span></button>
       </article>
 
     <!-- include tab contents -->
