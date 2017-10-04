@@ -448,9 +448,9 @@ details{
   }
 }
 
-details[open] SUMMARY ~ * {
+details[open] table { // Rammer table når details er åben
   animation: sweepin .5s ease-in-out;
-    animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
 }
 
 @keyframes sweepin {
