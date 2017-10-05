@@ -41,6 +41,10 @@ button, input {
   font-family: MyWebfont, Verdana, sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 .notifikation {
   position: absolute;
   background-color: $notifikationRed;
