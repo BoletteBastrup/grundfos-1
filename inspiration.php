@@ -60,7 +60,7 @@
         </article>
       </section>
       <div class="gradientBox"></div>
-      <button class="secondaryAction seeMore">Read more</button>
+      <button class="secondaryAction seeMore seeMoreBrochure">Read more</button>
     </section>
     <div class="notifikation">1</div>
   </section>

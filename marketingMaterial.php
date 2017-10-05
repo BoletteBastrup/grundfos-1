@@ -1,14 +1,17 @@
 <article id="marketingMaterial" class="tabcontent">
-  <p>Search by product number or name</p>
-  <section class="prefetch">
-    <input class="typeahead inputPump inputLarge">
-    <button type="button" id="submit" onclick="submitPump()" class="iconButton" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-    <button type="button" id="advancedSearch" name="button">Advanced Search</button>
-  </section>
-  <section class="show" id="shuit">
-    <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
-    <label for="mymaterialsonly">Search by 'My material' only</label>
-  </section>
+  <div class="animationWrapper">
+    <p>Search by product number or name</p>
+    <section class="prefetch">
+      <input class="typeahead inputPump inputLarge">
+      <button type="button" id="submit" onclick="submitPump()" class="iconButton" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" id="advancedSearch" name="button">Advanced Search</button>
+    </section>
+    <section class="show" id="shuit">
+      <input type="checkbox" name="mymaterialsonly" value="mymaterialsonly">
+      <label for="mymaterialsonly">Search by 'My material' only</label>
+    </section>
+  </div>
+
   <section id="advancedSearchBox" class="up-arrow">
 
     <div id="advancedSearchFlex">

@@ -39,6 +39,7 @@ $(document).ready(function (){
       $('.marketingMaterialTab').removeClass('active'); //Same story
       $('#marketingMaterialTab').removeAttr('defaultOpen');
       $('.inspirationTab').addClass('active');
+      $('.brochure').css({maxHeight:"333px"});
 
       $('#marketingMaterial').css('display', 'none');
       $('#inspiration').css('display', 'flex');
@@ -52,6 +53,8 @@ $(document).ready(function (){
       $('#inspiration').css('display', 'flex');
 
       $('.brochure').css('height', 'auto'); //Udvid artiklen
+      $('.gradientBox').css('display', 'none');
+      $('.seeMoreBrochure').text("Read less"); //ændre knappen til read less
     }
 });
 
