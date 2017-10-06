@@ -72,7 +72,7 @@
     </section>
     </div>
 
-    <button class="secondaryAction">Search</button>
+    <button class="secondaryAction advancedSearchBtn">Search</button>
 
 
   </section>

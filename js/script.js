@@ -11,6 +11,7 @@ $('#advancedSearch').click(function() {
   $('#shuit').toggleClass("show");
 });
 
+
 //Display block på advancedSearchBox når webbanners & uniqueSellingPoints er
 //checked samt der er præcis to produkter tilføjet
 var webBanners = $('#webBanners'); //Variabler
@@ -20,6 +21,7 @@ var search = $('#advancedSearchBox button'); //Variabler
 $(search).click(function() { //Ved klik på Search knappen
   if ($(webBanners).is(':checked') && ($(uniqueSellingPoints).is(':checked')) && ($('.productList li').length === 2)) {
     $(result).css('display', 'block'); //Tilføj display block
+    $('#searchResult').css('display', 'none'); //fjern normal søgeresultat hvis det er fremme
   }
   else {
     alert('Felterne er ikke udfyldt korrekt');
