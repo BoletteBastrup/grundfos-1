@@ -85,7 +85,7 @@
       <h3>CRN</h3>
     </article>
     <article class="filterItem product-thumb MAGNA">
-      <img src="img/products/Magna3.png" alt="Magna 3">
+      <img src="img/products/magna3.png" alt="Magna 3">
       <h3>MAGNA</h3>
     </article>
     <article class="filterItem product-thumb SEG">
